@@ -1,1 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+
+@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+@import 'custom_css/bootstrap-extend.min.css';
+@import 'custom_css/site.css';
+@import 'custom_css/custom.css';
+
+
