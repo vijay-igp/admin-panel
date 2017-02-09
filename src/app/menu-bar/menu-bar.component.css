@@ -1,0 +1,11 @@
+.options-dropdown-menu {
+    height: 59px;
+    display: block;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #3F51B5;
+}
+
+.options-dropdown-menu:hover {
+    background-color: #B9C0E3;
+}
