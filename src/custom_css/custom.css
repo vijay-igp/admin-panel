@@ -111,7 +111,7 @@ img.center{
 	text-decoration: underline !important;
 }
 
-.btn-success{
+/*.btn-success{
 	background-color: #e5baef;
 	border-color:  #e5baef;
 }
@@ -124,7 +124,7 @@ img.center{
 .btn-primary{
 	background-color:  #9999cc;
 	border: none;
-}
+}*/
 
 p{
 	word-wrap : break-word !important;

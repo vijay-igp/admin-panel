@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, NgZone } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
+
+  constructor(private _ngZone: NgZone) {}
+
+  execute() {
+    this._ngZone.run(() => {console.log('NgZone run executed')});
+  }
 }

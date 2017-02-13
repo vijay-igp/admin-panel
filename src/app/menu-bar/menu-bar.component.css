@@ -9,3 +9,14 @@
 .options-dropdown-menu:hover {
     background-color: #B9C0E3;
 }
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+}
+
+.fixed-doc {
+    position: fixed;
+    top: 60px;
+    right: 0;
+}
