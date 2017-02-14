@@ -27,7 +27,7 @@
 
           <div>{{product.description}}</div>
 
-          <div *ngIf="description.errors">
+          <div *ngIf="description.errors && (description.dirty || description.touched)">
             <div [hidden]="!description.errors.maxlength"></div>
           </div>
         </div>

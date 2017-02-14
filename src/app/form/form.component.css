@@ -6,6 +6,7 @@
     border: 1px solid green;
 }
 
-.ng-invalid:not(form) {
+.ng-invalid:not(form).ng-dirty,
+.ng-invalid:not(form).ng-touched {
     border: 1px solid red;
 }
