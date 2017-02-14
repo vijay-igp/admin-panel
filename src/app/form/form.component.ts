@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, DoCheck, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, DoCheck, SimpleChanges, Input } from '@angular/core';
 import { Product } from 'classes/product';
 import { ProductService } from 'services/product.service';
 
@@ -7,7 +7,7 @@ import { ProductService } from 'services/product.service';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit, OnChanges, DoCheck {
+export class FormValidationComponent implements OnInit, OnChanges, DoCheck {
   products: Product[];
   product = new Product();
 

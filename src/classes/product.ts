@@ -3,6 +3,7 @@ export class Product {
     constructor(
         public name?: string,
         public description?: string,
+        public quantity?: number,
         public price?: number,
         public weight?: string
     ) {}
