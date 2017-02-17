@@ -12,12 +12,12 @@
           </div>
           <p>valid: {{name.valid}}, invalid: {{name.invalid}}</p>
           <p>pristine: {{name.pristine}}, dirty: {{name.dirty}}</p>
-          <p>touched: {{name.untouched}}, untouched: {{name.touched}}</p>
+          <p>untouched: {{name.untouched}}, touched: {{name.touched}}</p>
 
           <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
             <div [hidden]="!name.errors.required">Field should not be empty</div>
             <div [hidden]="!name.errors.minlength">Minimum 3 characters</div>
-            <div [hidden]="!name.errors.maxlength">Minimum 3 characters</div>            
+            <div [hidden]="!name.errors.maxlength">Maximum 25 characters</div>            
           </div>
         </div>
 
@@ -34,16 +34,19 @@
 
         <div class="form-group">
           <label for="quantity">Quantity</label>
-          <input type="text" id="quantity" class="form-control" required [(ngModel)]="product.quantity" name="quantity">
+          <input type="number" id="quantity" class="form-control" required [(ngModel)]="product.quantity" name="quantity">
         </div>
 
         <div class="form-group">
-
+          <label for="type">Type</label>
+          <select name="type" id="type" class="form-control" [(ngModel)]="product.type" required #type="ngModel">
+            <option *ngFor="let type of productTypes" [value]="type.id">{{type.name}}</option>
+          </select>
         </div>
 
         <div class="form-group">
           <label for="price">Price</label>
-          <input type="number" id="price" class="form-control" required [(ngModel)]="product.price" name="price">
+          <input type="text" id="price" class="form-control" required [(ngModel)]="product.price" name="price">
         </div>
 
         <div class="form-group">
@@ -52,7 +55,7 @@
         </div>
 
         <div class="form-group padding-top-15">
-          <button type="submit" class="btn btn-primary" [disabled]="!productForm.form.valid">Add Product</button>
+          <button type="submit" class="btn btn-primary" [disabled]="!productForm.form.valid" (click)="addProduct()">Add Product</button>
         </div>
       </form>
     </div>

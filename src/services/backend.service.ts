@@ -10,9 +10,9 @@ const METRICS = [
         new Metric('Backlogs', 236, 'days')
       ],
       PRODUCTS = [
-        new Product('Cake', 'Chocolate cake', 2, 600, '1kg'),
-        new Product('Flowers', 'Bouquet of flowers', 10, 390, '240gms'),
-        new Product('Watch', 'Rolex wrist watch', 1, 100000, '100gms')
+        new Product('Cake', 'Chocolate cake', 2, 'type1', 600, '1kg'),
+        new Product('Flowers', 'Bouquet of flowers', 10, 'type2', 390, '240gms'),
+        new Product('Watch', 'Rolex wrist watch', 1, 'type3', 100000, '100gms')
       ];
 
 @Injectable()
