@@ -40,7 +40,7 @@
         <div class="form-group">
           <label for="type">Type</label>
           <select name="type" id="type" class="form-control" [(ngModel)]="product.type" required #type="ngModel">
-            <option *ngFor="let type of productTypes" [value]="type.id">{{type.name}}</option>
+            <option *ngFor="let type of productTypes" [value]="type">{{type.name}}</option>
           </select>
         </div>
 
@@ -56,8 +56,19 @@
 
         <div class="form-group padding-top-15">
           <button type="submit" class="btn btn-primary" [disabled]="!productForm.form.valid" (click)="addProduct()">Add Product</button>
+          <button class="btn btn-link" [disabled]="product">Delete Product</button>
         </div>
       </form>
+
+      <ul class="list-group">
+        <li class="list-group-item" *ngFor="let jsonObj of products">
+          <span>Name: {{jsonObj.name}}, </span>
+          <span>Description: {{jsonObj.description}}, </span>
+          <span>Price: {{jsonObj.price}}, </span>
+          <span>Quantity: {{jsonObj.quantity}}, </span>
+          <span>Type: {{jsonObj.type.name}}</span>
+        </li>
+      </ul>
     </div>
   </div>
     

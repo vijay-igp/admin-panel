@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, DoCheck, SimpleChanges, Input } from '@angular/core';
+import { Component, OnInit, DoCheck } from '@angular/core';
 import { Product } from 'classes/product';
 import { ProductService } from 'services/product.service';
 
@@ -7,8 +7,8 @@ import { ProductService } from 'services/product.service';
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormValidationComponent implements OnInit, OnChanges, DoCheck {
-  products: Product[];
+export class FormValidationComponent implements OnInit, DoCheck {
+  products: string[];
   productTypes: Object[];
   product = new Product();
 
@@ -17,7 +17,7 @@ export class FormValidationComponent implements OnInit, OnChanges, DoCheck {
   ) { }
 
   ngOnInit() {
-    this.products = this.service.getProducts();
+    // this.products = this.service.getProducts();
     this.productTypes = [
       {id: 'type1', name: 'Type 1'},
       {id: 'type2', name: 'Type 2'},
@@ -25,18 +25,18 @@ export class FormValidationComponent implements OnInit, OnChanges, DoCheck {
       {id: 'type4', name: 'Type 4'},
       {id: 'type5', name: 'Type 5'}
     ];
-    // this.product = new Product('Flowers', 'Bouquet of flowers', 450, '360gms');
+    this.product.type = this.productTypes[1];
+
+    this.products = Object.keys(localStorage).map((key) => {
+      return JSON.parse(localStorage.getItem(key))
+    });
+    console.log("Products list display: ", this.products);
+
     let timer = setTimeout(() => {
-      console.log(this.products);
-      // this.product = this.products[0];
+      console.log('test', this.products);
     }, 0);
 
     clearTimeout(timer);
-  }
-
-  ngOnChanges(changes: SimpleChanges) {
-    console.log(changes);
-    console.log(this.product);
   }
 
   ngDoCheck() {
@@ -46,7 +46,12 @@ export class FormValidationComponent implements OnInit, OnChanges, DoCheck {
   addProduct() {
     console.log('addProduct called=> ', this.product);
     localStorage.setItem("prod-"+this.product.name.toLowerCase(), JSON.stringify(this.product));
+    // this.products.push(this.product);
+    let obj = Object.assign({}, this.products);
+    console.log("Obj:", obj);
+
     this.product = new Product();
+
   }
 
 }

@@ -1,11 +1,12 @@
 export class Product {
     id: number;
+    public name: string;
+    public description: string;
+    public quantity: number;
+    public type: Object;
+    public price: number;
+    public weight: string;
     constructor(
-        public name?: string,
-        public description?: string,
-        public quantity?: number,
-        public type?: string,
-        public price?: number,
-        public weight?: string
+        type?: Object
     ) {}
 }
