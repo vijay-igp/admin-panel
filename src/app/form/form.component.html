@@ -37,10 +37,17 @@
           <input type="number" id="quantity" class="form-control" required [(ngModel)]="product.quantity" name="quantity">
         </div>
 
+        <!--<div class="form-group">
+          <ng-select [allowClear]="true" [items]="items" [active]="value[0]" (selected)="selected($event)" (data)="refreshValue($event)" (typed)="typed($event)" placeholder="Select Type"></ng-select>
+          <p></p>
+          <pre>{{value.text}}</pre>
+        </div>-->
+
         <div class="form-group">
           <label for="type">Type</label>
           <select name="type" id="type" class="form-control" [(ngModel)]="product.type" required #type="ngModel">
-            <option *ngFor="let type of productTypes" [value]="type">{{type.name}}</option>
+            <option value="" disabled selected>Select Type</option>
+            <option *ngFor="let type of productTypes" [ngValue]="type">{{type.name}}</option>
           </select>
         </div>
 

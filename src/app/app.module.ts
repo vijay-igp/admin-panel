@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DropdownModule } from 'ng2-bootstrap';
+import { SelectModule } from 'ng2-select';
 
 import { routing } from "./app.routing";
 
@@ -30,7 +31,8 @@ import { FormValidationComponent } from './form/form.component';
     FormsModule,
     HttpModule,
     routing,
-    DropdownModule.forRoot()
+    DropdownModule.forRoot(),
+    SelectModule
   ],
   providers: [
     BackendService,

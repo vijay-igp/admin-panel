@@ -1,4 +1,5 @@
-import { Component, ElementRef, OnInit, DoCheck } from '@angular/core';
+import { Component, ElementRef, OnInit, DoCheck, ViewChild } from '@angular/core';
+import { NgForm, NgModel } from '@angular/forms';
 import { Product } from 'classes/product';
 import { ProductService } from 'services/product.service';
 declare var $:any;
@@ -9,10 +10,14 @@ declare var $:any;
   styleUrls: ['./form.component.css']
 })
 export class FormValidationComponent implements OnInit, DoCheck {
+  @ViewChild('productForm') productForm: NgForm;
   elementRef: ElementRef;
-  products: string[];
+
+  products: Object[];
   productTypes: Object[];
-  product = new Product();
+  product: Product;
+  // items: Object[];
+  // value: any = {};
 
   constructor(
     private service: ProductService,
@@ -22,7 +27,8 @@ export class FormValidationComponent implements OnInit, DoCheck {
   }
 
   ngOnInit() {
-    // this.products = this.service.getProducts();
+    console.log('productForm ===>', this.productForm);
+
     this.productTypes = [
       {id: 'type1', name: 'Type 1'},
       {id: 'type2', name: 'Type 2'},
@@ -30,7 +36,16 @@ export class FormValidationComponent implements OnInit, DoCheck {
       {id: 'type4', name: 'Type 4'},
       {id: 'type5', name: 'Type 5'}
     ];
-    this.product.type = this.productTypes[1];
+
+    // this.items = [
+    //   {id: 'type1', text: 'Type 1'},
+    //   {id: 'type2', text: 'Type 2'},
+    //   {id: 'type3', text: 'Type 3'},
+    //   {id: 'type4', text: 'Type 4'},
+    //   {id: 'type5', text: 'Type 5'}
+    // ];
+    this.product = new Product("");
+    // this.product.type = "";
 
     this.products = Object.keys(localStorage).map((key) => {
       return JSON.parse(localStorage.getItem(key))
@@ -44,19 +59,30 @@ export class FormValidationComponent implements OnInit, DoCheck {
     clearTimeout(timer);
   }
 
+  // selected(value: any): void {
+  //   console.log('selected value: ', value);
+  // }
+
+  // refreshValue(value: any): void {
+  //   this.value = value;
+  // }
+
   ngDoCheck() {
-    console.log("Jquery test execution: ", $(this.elementRef));
-    console.log('docheck executed => ', this.product);
+    // console.log("Jquery test execution: ", $('.container-fluid'));
+    console.log('docheck executed => ', this.product);    
   }
 
   addProduct() {
     console.log('addProduct called=> ', this.product);
-    localStorage.setItem("prod-"+this.product.name.toLowerCase(), JSON.stringify(this.product));
-    // this.products.push(this.product);
-    let obj = Object.assign({}, this.products);
-    console.log("Obj:", obj);
+    let prodStr = JSON.stringify(this.product);
+    let prodObj = Object.assign({}, this.product);
+    console.log('prodObj:', prodObj);
+    
+    localStorage.setItem("prod-"+this.product.name.toLowerCase(), prodStr);
+    this.products.push(prodObj);
 
     this.product = new Product();
+    this.productForm.reset();
 
   }
 
