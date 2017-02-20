@@ -1,6 +1,7 @@
-import { Component, OnInit, DoCheck } from '@angular/core';
+import { Component, ElementRef, OnInit, DoCheck } from '@angular/core';
 import { Product } from 'classes/product';
 import { ProductService } from 'services/product.service';
+declare var $:any;
 
 @Component({
   selector: 'app-form',
@@ -8,13 +9,17 @@ import { ProductService } from 'services/product.service';
   styleUrls: ['./form.component.css']
 })
 export class FormValidationComponent implements OnInit, DoCheck {
+  elementRef: ElementRef;
   products: string[];
   productTypes: Object[];
   product = new Product();
 
   constructor(
-    private service: ProductService
-  ) { }
+    private service: ProductService,
+    elementRef: ElementRef
+  ) {
+    this.elementRef = elementRef;
+  }
 
   ngOnInit() {
     // this.products = this.service.getProducts();
@@ -40,6 +45,7 @@ export class FormValidationComponent implements OnInit, DoCheck {
   }
 
   ngDoCheck() {
+    console.log("Jquery test execution: ", $(this.elementRef));
     console.log('docheck executed => ', this.product);
   }
 
