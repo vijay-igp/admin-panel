@@ -17,6 +17,7 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { MetricsListComponent } from './metrics-list/metrics-list.component';
 import { LotRowComponent } from './lot-row/lot-row.component';
 import { FormValidationComponent } from './form/form.component';
+import { LotDetailsComponent } from './lot-details/lot-details.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormValidationComponent } from './form/form.component';
     MenuBarComponent,
     MetricsListComponent,
     LotRowComponent,
-    FormValidationComponent
+    FormValidationComponent,
+    LotDetailsComponent
   ],
   imports: [
     BrowserModule,
