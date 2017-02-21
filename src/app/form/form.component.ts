@@ -13,10 +13,10 @@ export class FormValidationComponent implements OnInit, DoCheck {
   @ViewChild('productForm') productForm: NgForm;
   elementRef: ElementRef;
 
-  products: Object[];
-  productTypes: Object[];
+  products: any[];
+  productTypes: any[];
   product: Product;
-  // items: Object[];
+  // items: any[];
   // value: any = {};
 
   constructor(
@@ -44,13 +44,13 @@ export class FormValidationComponent implements OnInit, DoCheck {
     //   {id: 'type4', text: 'Type 4'},
     //   {id: 'type5', text: 'Type 5'}
     // ];
-    this.product = new Product("");
-    // this.product.type = "";
+    this.product = new Product();
+    this.product.type = "";
+    console.log('product object ==>', this.product);
 
     this.products = Object.keys(localStorage).map((key) => {
       return JSON.parse(localStorage.getItem(key))
     });
-    console.log("Products list display: ", this.products);
 
     let timer = setTimeout(() => {
       console.log('test', this.products);
@@ -67,17 +67,11 @@ export class FormValidationComponent implements OnInit, DoCheck {
   //   this.value = value;
   // }
 
-  ngDoCheck() {
-    // console.log("Jquery test execution: ", $('.container-fluid'));
-    console.log('docheck executed => ', this.product);    
-  }
+  ngDoCheck() {}
 
   addProduct() {
-    console.log('addProduct called=> ', this.product);
     let prodStr = JSON.stringify(this.product);
     let prodObj = Object.assign({}, this.product);
-    console.log('prodObj:', prodObj);
-    
     localStorage.setItem("prod-"+this.product.name.toLowerCase(), prodStr);
     this.products.push(prodObj);
 

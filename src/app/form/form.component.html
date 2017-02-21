@@ -8,7 +8,7 @@
           <input type="text" class="form-control" id="name" required minlength="3" maxlength="25" [(ngModel)]="product.name" name="name" #name="ngModel">
 
           <div>
-            {{name.errors | json}}
+            Errors object: {{name.errors | json}}
           </div>
           <p>valid: {{name.valid}}, invalid: {{name.invalid}}</p>
           <p>pristine: {{name.pristine}}, dirty: {{name.dirty}}</p>

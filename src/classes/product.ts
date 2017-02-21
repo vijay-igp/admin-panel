@@ -3,10 +3,10 @@ export class Product {
     public name: string;
     public description: string;
     public quantity: number;
-    public type: Object;
+    public type: any;
     public price: number;
     public weight: string;
     constructor(
-        type?: Object
+        type?: any
     ) {}
 }
