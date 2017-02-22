@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./lot-row.component.css']
 })
 export class LotRowComponent implements OnInit {
+  showDetails = false;
 
   constructor() { }
 
@@ -14,6 +15,8 @@ export class LotRowComponent implements OnInit {
   
   loadLotDetails() {
     console.log('load details executed...');
+    this.showDetails = !this.showDetails;
+
   }
 
 }

@@ -327,7 +327,7 @@ h4.lot-title{
 .lot-item .lot-details{
 	background-color: #e2e2e2;
 	padding: 10px;
-	display: none;
+	/*display: none;*/
 	min-height: 0px; 
 }
 

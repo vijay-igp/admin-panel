@@ -1,4 +1,4 @@
-<div class="row lot-item" (click)="loadLotDetails()">
+<div class="row lot-item" (click)="showDetails = !showDetails">
 	<div class=" col-md-12 no-padding shadow" id="outer-layer-{{id}}">
 		<!-- Lot Card Begins -->
 		<div class="lot-item-c lot-item-c-1" >
@@ -42,14 +42,18 @@
 
 
 		<!-- Lot Card Details Begins -->
-		<app-lot-details></app-lot-details>
+		<app-lot-details [showDetails]="showDetails"></app-lot-details>
 
-		<div class="col-md-12 lot-details" style="display:none;" id="div-prep-inner-layer-prepdet-{{id}}">
-			<div class="details-loader innerLoader" >
-				<img src="assets/images/loader.gif" />
-			</div>	
-			
-		</div>
+		<!--<div id="menu">
+			<a>hover me</a>
+			<ul id="list">
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+				<li>item</li>
+			</ul>
+		</div>-->
 
 		<!-- Lot Details Ends -->
 	</div>
