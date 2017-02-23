@@ -18,6 +18,7 @@ export class MetricsListComponent implements OnInit {
 
   ngOnInit() {
     this.metrics = this.service.getMetrics();
+    console.log('Metrics init=>', this.metrics);
     this.testStr = 'Hello';
   }
 

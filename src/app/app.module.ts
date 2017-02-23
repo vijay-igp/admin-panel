@@ -10,6 +10,7 @@ import { routing } from "./app.routing";
 import { MetricService } from 'services/metric.service';
 import { ProductService } from 'services/product.service';
 import { BackendService } from 'services/backend.service';
+import { LotDataService } from 'services/lot-data.service';
 import { Logger } from 'services/logger.service';
 
 import { AppComponent } from './app.component';
@@ -40,6 +41,7 @@ import { LotDetailsComponent } from './lot-details/lot-details.component';
     BackendService,
     MetricService,
     ProductService,
+    LotDataService,
     Logger
   ],
   bootstrap: [AppComponent]
