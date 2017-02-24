@@ -19,11 +19,20 @@ export class LotRowComponent implements OnInit {
   loadLotDetails() {
     console.log('load details executed...');
     this.showDetails = !this.showDetails;
-    this.lotDetails = this.service.getLotDetails();
+
+    if(!this.lotDetails) {
+      // this.lotDetails = this.service.getLotData();
+      this.service.getLotData().then( (lotItems: LotData[]) => {
+        // this.logger.log(`Fetched ${lotItems.length} rows from lot.`);
+        this.lotDetails = lotItems;
+        console.log('inside then of getLotDetails: ', this.lotDetails);
+      });
+    }
 
     setTimeout(() => {
       console.log('executed inside timeout');
       console.log('lot details list: ', this.lotDetails);
+      
     }, 1000);
     
   }

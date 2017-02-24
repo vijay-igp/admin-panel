@@ -4,7 +4,9 @@ import { Logger } from 'services/logger.service';
 import { Metric } from 'classes/metric';
 import { Product } from 'classes/product';
 import { LotData } from 'classes/lot-data';
+import { Http } from '@angular/http';
 
+import 'rxjs/add/operator/toPromise';
 
 const METRICS = [
         new Metric('Pending Lots', 18),
@@ -14,7 +16,8 @@ const METRICS = [
 
 @Injectable()
 export class BackendService {
-  constructor(private logger: Logger) {}
+  constructor(private logger: Logger,
+              private http: Http) {}
 
   getAll(type: Type<any>): PromiseLike<any[]> {
     if (type === Metric) {
@@ -26,8 +29,16 @@ export class BackendService {
     throw err;
   }
 
-  getLotData(): Promise<any[]> {
-    const lotItems = [new LotData()];
-    return Promise.resolve<LotData[]>(lotItems);
+  getLotData(): Promise<LotData[]> {
+
+    return this.http.get('assets/json/products.json')
+              .toPromise()
+              .then(response => response.json() as any[])
+              .catch(this.handleError);
+  }
+
+  private handleError(error: any): Promise<any> {
+    console.log('Error occurred', error);    
+    return Promise.reject(error.message || error);
   }
 }
