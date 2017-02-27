@@ -18,7 +18,7 @@ export class LotDataService {
 
   getLotData(): Promise<LotData[]> {
 
-    return this.http.get('assets/json/products.json')
+    return this.http.get('assets/json/lot-data.json')
               .toPromise()
               .then(response => response.json() as any[])
               .catch(this.handleError);

@@ -1,4 +1,4 @@
-<div class="row lot-item" (click)="loadLotDetails()">
+<div class="row lot-item" (click)="loadLotDetails($event)">
 	<div class=" col-md-12 no-padding shadow" id="outer-layer-{{id}}">
 		<!-- Lot Card Begins -->
 		<div class="lot-item-c lot-item-c-1" >
@@ -42,7 +42,7 @@
 
 
 		<!-- Lot Card Details Begins -->
-		<app-lot-details [showDetails]="showDetails"></app-lot-details>
+		<app-lot-details [lotDetails]="lotDetails" [showDetails]="showDetails"></app-lot-details>
 
 		<!--<div id="menu">
 			<a>hover me</a>

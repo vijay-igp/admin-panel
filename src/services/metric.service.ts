@@ -14,7 +14,7 @@ export class MetricService {
 
   getMetrics() {
     this.backend.getAll(Metric).then( (metrics: Metric[]) => {
-      this.logger.log(`Fetched ${metrics.length} metrics.`);
+      // this.logger.log(`Fetched ${metrics.length} metrics.`);
       this.metrics.push(...metrics); // fill cache
     });
     return this.metrics;

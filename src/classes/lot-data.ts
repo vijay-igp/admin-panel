@@ -10,6 +10,8 @@ export class LotData {
     public discount_per: number;
     public discounted_price: number;
     public gross_margin: number;
+    public mpl_low: number;
+    public mpl_high: number;
     public mplFlag: string;
     public theme: string;
     public festival_conf: string;

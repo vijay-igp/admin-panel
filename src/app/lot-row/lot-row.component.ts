@@ -16,8 +16,8 @@ export class LotRowComponent implements OnInit {
   ngOnInit() {
   }
   
-  loadLotDetails() {
-    console.log('load details executed...');
+  loadLotDetails(event: Event) {
+    event.stopPropagation();
     this.showDetails = !this.showDetails;
 
     if(!this.lotDetails) {
@@ -29,12 +29,6 @@ export class LotRowComponent implements OnInit {
       });
     }
 
-    setTimeout(() => {
-      console.log('executed inside timeout');
-      console.log('lot details list: ', this.lotDetails);
-      
-    }, 1000);
-    
   }
 
 }

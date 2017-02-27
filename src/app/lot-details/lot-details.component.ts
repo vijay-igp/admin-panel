@@ -2,6 +2,8 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges,
           trigger, state, animate, style, transition
 } from '@angular/core';
 
+import { LotData } from 'classes/lot-data';
+
 @Component({
   selector: 'app-lot-details',
   templateUrl: './lot-details.component.html',
@@ -17,17 +19,25 @@ import { Component, OnInit, Input, OnChanges, SimpleChanges,
   ]
 })
 export class LotDetailsComponent implements OnInit {
-  @Input() showDetails: boolean; 
+  @Input() showDetails: boolean;
+  @Input() lotDetails: any;
+
+  currentLotDetails = new LotData();
 
   constructor() { }
 
   ngOnInit() {
+    console.log('showDetails: ', this.showDetails);
+    console.log('lotDetails: ', this.lotDetails);    
   }
 
   ngOnChanges(changes: SimpleChanges) {
 
-    console.log('Changes: previous value=>', changes['showDetails'].previousValue);
-    console.log('Changes: current value=>', changes['showDetails'].currentValue);
+    if(changes['lotDetails'] && changes['lotDetails'].currentValue && changes['lotDetails'].currentValue.length>0) {
+      this.currentLotDetails = changes['lotDetails'].currentValue[0];
+      console.log('lotDetails: =>', this.currentLotDetails);
+    }
+    // console.log('Changes: current value=>', changes['showDetails'].currentValue);
   }
 
 }
