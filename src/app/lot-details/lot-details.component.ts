@@ -22,7 +22,7 @@ export class LotDetailsComponent implements OnInit {
   @Input() showDetails: boolean;
   @Input() lotDetails: any;
 
-  currentLotDetails = new LotData();
+  lotDataList: LotData[];
 
   constructor() { }
 
@@ -34,8 +34,8 @@ export class LotDetailsComponent implements OnInit {
   ngOnChanges(changes: SimpleChanges) {
 
     if(changes['lotDetails'] && changes['lotDetails'].currentValue && changes['lotDetails'].currentValue.length>0) {
-      this.currentLotDetails = changes['lotDetails'].currentValue[0];
-      console.log('lotDetails: =>', this.currentLotDetails);
+      this.lotDataList = changes['lotDetails'].currentValue;
+      console.log('lotDetails: =>', this.lotDataList);
     }
     // console.log('Changes: current value=>', changes['showDetails'].currentValue);
   }

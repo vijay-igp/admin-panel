@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { DropdownModule } from 'ng2-bootstrap';
 import { SelectModule } from 'ng2-select';
+import { OrdermModule } from './orderm/orderm.module';
 
 import { routing } from "./app.routing";
 
@@ -35,7 +36,8 @@ import { LotDetailsComponent } from './lot-details/lot-details.component';
     HttpModule,
     routing,
     DropdownModule.forRoot(),
-    SelectModule
+    SelectModule,
+    OrdermModule
   ],
   providers: [
     BackendService,

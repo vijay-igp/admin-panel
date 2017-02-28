@@ -34,7 +34,7 @@
               </thead>
 
               <tbody>
-                <tr id="prep-20245" data-prep-id="20245" data-lot-id="304" data-status="0">
+                <tr id="prep-20245" data-prep-id="20245" data-lot-id="304" data-status="0" *ngFor="let currentLotDetails of lotDataList">
 
                   <td>
                     <!--sku code-->
@@ -50,26 +50,8 @@
                       <tbody>
                         <tr>
                           <td>
-                            <p class="hover-img" style="border-bottom: 1px dotted #62A8EA" id="20245-p-0">Ganesha Idol(L1HDAH0001)</p><a class="pointer" onclick="openWin(17244)">Edit</a>
+                            <p class="hover-img" style="border-bottom: 1px dotted #62A8EA" id="20245-p-0">{{currentLotDetails.product_names}}</p><a class="pointer" onclick="openWin(17244)">Edit</a>
                             <!--<div class="img-pop-up shadow" style="width:200px;height:200px" id="img-pop-20245-p-0"><img class="img-responsive" style="width:200px;height:200px" src="/newigp/Product_upload/image_main/ref_image/main_image/17244.jpg"></div>-->
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p class="hover-img" style="border-bottom: 1px dotted #62A8EA" id="20245-p-1">Panch Batti Small Brass Diya(L1HDJM0001)</p><a class="pointer" onclick="openWin(19368)">Edit</a>
-                            <!--<div class="img-pop-up shadow" style="width:200px;height:200px" id="img-pop-20245-p-1"><img class="img-responsive" style="width:200px;height:200px" src="/newigp/Product_upload/image_main/ref_image/main_image/19368.jpg"></div>-->
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p class="hover-img" style="border-bottom: 1px dotted #62A8EA" id="20245-p-2">Swastik Brass Chowki(L1HDJM0002)</p><a class="pointer" onclick="openWin(19369)">Edit</a>
-                            <!--<div class="img-pop-up shadow" style="width:200px;height:200px" id="img-pop-20245-p-2"><img class="img-responsive" style="width:200px;height:200px" src="/newigp/Product_upload/image_main/ref_image/main_image/19369.jpg"></div>-->
-                          </td>
-                        </tr>
-                        <tr>
-                          <td>
-                            <p class="hover-img" style="border-bottom: 1px dotted #62A8EA" id="20245-p-3">Bamboo Gift Box(L1BXCH009A)</p><a class="pointer" onclick="openWin(20229)">Edit</a>
-                            <!--<div class="img-pop-up shadow" style="width:200px;height:200px" id="img-pop-20245-p-3"><img class="img-responsive" style="width:200px;height:200px" src="/newigp/Product_upload/image_main/ref_image/main_image/20229.jpg"></div>-->
                           </td>
                         </tr>
                       </tbody>
@@ -82,16 +64,7 @@
                     <table class="table inner-table table-responsive lot-items-table " style="height:auto;width:100%;margin : 0">
                       <tbody>
                         <tr>
-                          <td>1*1330</td>
-                        </tr>
-                        <tr>
-                          <td>1*78</td>
-                        </tr>
-                        <tr>
-                          <td>1*121</td>
-                        </tr>
-                        <tr>
-                          <td>1*88</td>
+                          <td>{{currentLotDetails.sku_quantity}}*{{currentLotDetails.display_price}}</td>
                         </tr>
                       </tbody>
                     </table>
@@ -116,8 +89,7 @@
 
                   <td>
                     <!--sku cost-->
-                    <span>
-                      1617									<input type="hidden" class="field-20245" id="sku-cost-20245" value="1617">
+                    <span>{{currentLotDetails.display_price}}<input type="hidden" class="field-20245" id="sku-cost-20245" value="1617">
                     </span>
                   </td>
 
