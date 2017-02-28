@@ -19,16 +19,19 @@
           <!-- Navbar Toolbar -->
           <ul class="nav navbar-toolbar">
             <li class="hidden-float" id="toggleMenubar">
-              <a data-toggle="menubar" href="#" role="button" tabindex="1">
+              <a data-toggle="menubar" href="javascript:void(0)" role="button" tabindex="1">
                 <i class="icon hamburger hamburger-arrow-left">
-                      <span class="sr-only">Toggle menubar</span>
-                      <span class="hamburger-bar"></span>
-                    </i>
+                  <span class="sr-only">Toggle menubar</span>
+                  <span class="hamburger-bar"></span>
+                </i>
               </a>
             </li>
             <li class="page-title">
-              SKU Attribution
+              Admin Panel
             </li>
+            <li class="module-option" routerLinkActive="active"><a [routerLink]="['/form']">Form</a></li>
+            <li class="module-option" routerLinkActive="active"><a [routerLink]="['/product_upload']">Attribution</a></li>
+            <li class="module-option" routerLinkActive="active"><a [routerLink]="['/orders']">Orders</a></li>
           </ul>
           <!-- End Navbar Toolbar -->
           <!-- Navbar Toolbar Right -->
@@ -69,7 +72,7 @@
     </div>
   </div>
 
-  <div class="row">
+  <!--<div class="row">
     <div class="col-xs-6">
       <ul class="nav nav-pills">
         <li routerLinkActive="active"><a [routerLink]="['/form']">Form</a></li>
@@ -77,5 +80,5 @@
         <li routerLinkActive="active"><a [routerLink]="['/orders']">Orders</a></li>
       </ul>
     </div>
-  </div>
+  </div>-->
 </div>

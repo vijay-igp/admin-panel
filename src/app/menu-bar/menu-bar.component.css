@@ -20,3 +20,13 @@
     top: 60px;
     right: 0;
 }
+
+.module-option {
+    width: 100px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.module-option > a {
+    color: #262626;
+}

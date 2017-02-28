@@ -175,6 +175,7 @@ p:last-of-type{
     font-size: 21px;
     color: #fff;
     font-weight: 600;
+	margin-right: 20px;
 }
 
 .navbar-container.container-fluid{
