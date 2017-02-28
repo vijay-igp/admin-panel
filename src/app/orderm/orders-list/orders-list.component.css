@@ -1,0 +1,26 @@
+.container-fluid {
+    background-color: #F3F4F5;
+}
+
+.orders-view {
+    margin-top: 20px;
+}
+
+.table-hover tr > td {
+    text-align: center;
+}
+
+.table-hover > tbody > tr > td {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.table-hover > thead > tr > td {
+    font-weight: 600;
+    background-color: #337AB7;
+    color: #FFFFFF;
+}
+
+.list-group-item .badge {
+    background-color: #337AB7;
+}

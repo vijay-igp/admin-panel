@@ -157,7 +157,7 @@ p:last-of-type{
 }
 
 .site-navbar .navbar-container{
-	background-color: #9FA8DA;
+	background-color: #93bde1;
 }
 
 .user-menu{
@@ -366,7 +366,6 @@ th, td, thead{
 }
 
 .table > tbody > tr > td{
-	font-weight: 600;
 	text-align: center;
 	color: #000000;
 	vertical-align: middle;
