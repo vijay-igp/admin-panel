@@ -1009,9 +1009,9 @@ transform: translate(-50%, -50%);
    margin : 0 !important;
 }
 
-.btn, .btn:hover a{
+/*.btn, .btn:hover a{
 color : #fff !important;
-}
+}*/
 
 .text-left{
 text-align : left;
