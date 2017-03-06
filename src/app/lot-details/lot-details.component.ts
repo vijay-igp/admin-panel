@@ -28,7 +28,7 @@ export class LotDetailsComponent implements OnInit {
 
   ngOnInit() {
     console.log('showDetails: ', this.showDetails);
-    console.log('lotDetails: ', this.lotDetails);    
+    console.log('lotDetails: ', this.lotDetails);
   }
 
   ngOnChanges(changes: SimpleChanges) {

@@ -34,10 +34,10 @@
               </thead>
 
               <tbody>
-                <tr id="prep-20245" data-prep-id="20245" data-lot-id="304" data-status="0" *ngFor="let currentLotDetails of lotDataList">
+                <tr id="prep-20245" data-prep-id="20245" data-lot-id="304" data-status="0" class="row-style" *ngFor="let currentLotDetails of lotDataList">
 
+                  <!--sku code-->
                   <td>
-                    <!--sku code-->
                     <span>{{currentLotDetails.product_sku}}</span>
                     <input type="hidden" value="20245" id="field-20245-0" class="field-20245">
 
@@ -45,6 +45,7 @@
 
                   </td>
 
+                  <!--product names: editable-->
                   <td>
                     <table class="table inner-table table-responsive lot-items-table " style="height:auto;width:100%;margin : 0">
                       <tbody>
@@ -59,8 +60,8 @@
 
                   </td>
 
+                  <!--product quantity-->
                   <td>
-                    <!--product quantity-->
                     <table class="table inner-table table-responsive lot-items-table " style="height:auto;width:100%;margin : 0">
                       <tbody>
                         <tr>
@@ -69,8 +70,9 @@
                       </tbody>
                     </table>
                   </td>
+
+                  <!-- sku Name: editable -->
                   <td>
-                    <!-- sku Name -->
                     <span class="value-20245 ">Ganesha Idol with Panch Batti Brass Diya &amp; Swastik Brass Chowki</span>
                     <div class="field-20245"></div>
                     <div class="table-field form-group form-material">
@@ -78,8 +80,9 @@
                     </div>
 
                   </td>
+
+                  <!--sku quantity: editable-->
                   <td>
-                    <!--sku quantity-->
                     <span class="value-20245 ">{{currentLotDetails.sku_quantity}}</span>
                     <div class="table-field form-group form-material">
                       <input type="text" class="form-control hidden field-20245" id="field-20245-1" value="{{currentLotDetails.sku_quantity}}" pattern="[0-9]*">
@@ -87,53 +90,54 @@
 
                   </td>
 
+                  <!--sku cost-->
                   <td>
-                    <!--sku cost-->
                     <span>{{currentLotDetails.display_price}}<input type="hidden" class="field-20245" id="sku-cost-20245" value="1617">
                     </span>
                   </td>
 
+                  <!--display price: editable-->
                   <td>
-                    <!--display price-->
                     <span class="value-20245 ">{{currentLotDetails.display_price}}</span>
                     <div class="table-field form-group form-material">
                       <input type="text" class="form-control hidden field-20245 display-price" id="field-20245-2" value="{{currentLotDetails.display_price}}" pattern="[0-9]+(\.[0-9][0-9]?)?">
                     </div>
                   </td>
 
+                  <!--discount%: editable-->
                   <td>
-                    <!--discount%-->
                     <span class="value-20245  ">{{currentLotDetails.discount}}</span>
                     <div class="table-field form-group form-material">
                       <input type="text" class="form-control hidden field-20245 discount-pers " id="field-20245-3" value="{{currentLotDetails.discount}}" pattern="[0-9]+(\.[0-9][0-9]?)?">
                     </div>
                   </td>
 
+                  <!--discounted price: editable-->
                   <td>
-                    <!--discounted price-->
                     <span class="value-20245 ">{{currentLotDetails.discounted_price}}</span>
                     <div class="table-field form-group form-material">
                       <input type="text" class="form-control hidden field-20245 discount-price" id="field-20245-4" value="{{currentLotDetails.discounted_price}}" pattern="[0-9]+(\.[0-9][0-9]?)?">
                     </div>
                   </td>
 
+                  <!--gross margin-->
                   <td>
-                    <!--gross margin-->
                     <span id="gross-margin-20245">{{currentLotDetails.gross_margin}}</span>
                     <div class="table-field form-group form-material">
                       <input type="hidden" id="field-20245-5" value="{{currentLotDetails.gross_margin}}">
                     </div>
                   </td>
 
+                  <!-- mpl flag -->
                   <td>
-                    <!-- mpl flag -->
                     <span id="mpl-value-20245" data-mpl-low="2250" data-mpl-high="6000"> 
                       premium								</span>
                     <input type="hidden" id="field-20245-9" value="{{currentLotDetails.flag_mpl}}">
 
                   </td>
+
+                  <!-- theme -->
                   <td>
-                    <!-- theme -->
                     <!--span class=''>NA</span-->
                     <p class="hover-img-1" style="border-bottom: 1px dotted #62A8EA" id="20245">NA</p>
                     <div class="img-pop-up shadow" style="width:400px;height:400px" id="img-pop-20245-th">
@@ -143,8 +147,8 @@
 
                   </td>
 
+                  <!-- festival config / festival type: editable -->
                   <td>
-                    <!-- festival config / festival type -->
                     <div class=" checkbox-custom checkbox-primary">
                       <input class="field-20245 festival-check" type="checkbox" name="field-20245-c" id="f-check-20245" disabled="">
                       <label for="field-20245-a"></label>
@@ -253,8 +257,8 @@
                     </div>
                   </td>
 
+                  <!-- International Config -->
                   <td style="display:none">
-                    <!-- International Config -->
                     <div class="checkbox-custom checkbox-primary">
                       <input class="field-20245 i-check" type="checkbox" name="field-20245-c" id="i-check-20245" disabled="">
                       <label for="field-20245-b"></label>
@@ -336,8 +340,8 @@
                     </div>
                   </td>
 
+                  <!-- Mapping -->
                   <td>
-                    <!-- Mapping -->
 
                     <span class="value-20245 " id="mapping-20245-label">Configure</span>
 
@@ -1009,35 +1013,45 @@
                     </div>
                   </td>
 
+                  <!-- Personalization config -->
                   <td style="display:none">
-                    <!-- Personalization config -->
                     <span>NA</span>
                     <input type="hidden" value="NA" id="field-20245-12" class="field-20245">
 
                   </td>
+
+                  <!-- flag_fs: editable -->
                   <td>
-                    <!-- flag_fs -->
                     <div class="checkbox-custom checkbox-primary">
                       <input class="field-20245" type="checkbox" name="field-20245-13" id="field-20245-13" disabled="">
                       <label for="field-20245-13"></label>
                     </div>
                   </td>
+
+                  <!-- upsell: editable -->
                   <td>
-                    <!-- upsell -->
                     <span>{{currentLotDetails.upsell}}</span>
                     <input type="hidden" name="field-20245-14" id="field-20245-14" value="0">
 
                   </td>
 
+                  <!-- list in website -->
                   <td>
-                    <!-- list in website -->
                     <span>NA</span>
                     <input type="hidden" value="0" data-flag-addon="0" id="field-20245-15" class="field-20245">
                   </td>
+
+                  <!--proactive upload-->
                   <td>
-                    <span>Done</span> </td>
+                    <span>Done</span> 
+                  </td>
+
+                  <!--vendor given code(hamper)-->
                   <td>
-                    <span>L1GHTZ0203</span> </td>
+                    <span>L1GHTZ0203</span>
+                  </td>
+
+                  <!--comments-->
                   <td>
                     <span class="show-comment pointer" style="font-weight:normal;border-bottom:1px solid black;">Show</span>
                     <div id="c-pop-com-20245" style="height: 270px;" class="c-pop-content z-depth-1">
@@ -1057,8 +1071,8 @@
 
                   </td>
 
+                  <!-- actions -->
                   <td>
-                    <!-- actions -->
                     <a href="javascript:void(0)" data-prep-id="20245" class="edit-row ">edit</a>
                     <a href="javascript:void(0)" data-prep-id="20245" class="save-row save-row-20245 hidden">save</a>
                     <p><a href="javascript:void(0)" data-prep-id="20245" class="reject-row">Discard</a></p>
@@ -1079,6 +1093,9 @@
 
                   </td>
 
+                </tr>
+                <tr>
+                  <button>Edit</button>
                 </tr>
               </tbody>
           </table>
