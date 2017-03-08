@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import * as XLSX from 'ts-xlsx';
+
 @Component({
   selector: 'app-orders-list',
   templateUrl: './orders-list.component.html',
@@ -18,11 +20,23 @@ export class OrdersListComponent implements OnInit {
     {id: '000009', description: 'Order 9', status: 'Active', date: '21 February 2017'},
     {id: '000010', description: 'Order 10', status: 'Active', date: '24 February 2017'}
   ];
+  fileName: string;
 
   constructor() { }
 
   ngOnInit() {
     console.log('OrdersListComponent called successfully', this.allOrders);
+    console.log('Orders component: ', XLSX);
+    
+  }
+
+  uploadFile(event) {
+    console.log('Target obj=>', event);
+    
+    if(event.target.files && event.target.files[0]) {
+      this.fileName = event.target.files[0].name;
+      console.log('File name: ', this.fileName, ', path: ', event.target.value);
+    }
   }
 
 }

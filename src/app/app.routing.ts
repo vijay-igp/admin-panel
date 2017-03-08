@@ -10,9 +10,9 @@ import { AuthGuard } from 'services/auth-guard.service';
 
 const route: Routes = [
     { path: '', component: HomeComponent, canActivate: [AuthGuard] },
-    { path: 'product_upload', component: MetricsListComponent },
-    { path: 'form', component: FormValidationComponent },
-    { path: 'orders', component: OrdersListComponent },
+    { path: 'product_upload', component: MetricsListComponent, canActivate: [AuthGuard] },
+    { path: 'form', component: FormValidationComponent, canActivate: [AuthGuard] },
+    { path: 'orders', component: OrdersListComponent, canActivate: [AuthGuard] },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
 

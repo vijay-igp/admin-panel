@@ -17,6 +17,8 @@
           Cancelled
           <span class="glyphicon glyphicon-chevron-right" [ngClass]="{'hidden': true}"></span>
         </button>
+
+        <input type="file" id="fileTest">
       </ul>
     </div>
     <div class="col-sm-9">
@@ -24,17 +26,26 @@
         <thead>
           <tr>
             <td class="col-sm-1">Order#</td>
-            <td class="col-sm-6">Description</td>
-            <td class="col-sm-3">Status</td>
+            <td class="col-sm-5">Description</td>
+            <td class="col-sm-2">Status</td>
             <td class="col-sm-2">Date</td>
+            <td class="col-sm-2" id="upload-header">Upload Excel</td>
           </tr>
         </thead>
         <tbody>
           <tr *ngFor="let order of allOrders">
-            <td>{{order.id}}</td>
-            <td>{{order.description}}</td>
-            <td>{{order.status}}</td>
-            <td>{{order.date}}</td>
+            <td class="col-sm-1">{{order.id}}</td>
+            <td class="col-sm-5">{{order.description}}</td>
+            <td class="col-sm-2">{{order.status}}</td>
+            <td class="col-sm-2">{{order.date}}</td>
+            <td class="col-sm-2">
+              <label class="file-upload">
+                <!--<span>Upload</span>-->
+                <img src="../../../assets/images/upload.png" width="20" height="20">
+                <input type="file" class="uploadfile" (change)="uploadFile($event)">
+                <span>{{fileName}}</span>
+              </label>
+            </td>
           </tr>
         </tbody>
       </table>
