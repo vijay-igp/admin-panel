@@ -1,0 +1,31 @@
+<div class="container-fluid">
+  <div class="row orders-view">
+    <div class="col-sm-3">
+      <ul class="list-group">
+        <button class="list-group-item">
+          <span class="badge">160</span>
+          Active
+          <span class="glyphicon glyphicon-chevron-right" [ngClass]="{'hidden': false}"></span>
+        </button>
+        <button class="list-group-item">
+          <span class="badge">45</span>
+          Pending
+          <span class="glyphicon glyphicon-chevron-right" [ngClass]="{'hidden': true}"></span>
+        </button>
+        <button class="list-group-item">
+          <span class="badge">20</span>
+          Cancelled
+          <span class="glyphicon glyphicon-chevron-right" [ngClass]="{'hidden': true}"></span>
+        </button>
+
+        <input type="file" id="fileTest1">
+        <input type="file" id="fileTest2">
+        <input type="file" id="fileTest3">
+        <input type="file" id="fileTest4">
+      </ul>
+    </div>
+    <div class="col-sm-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

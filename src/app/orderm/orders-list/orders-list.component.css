@@ -6,6 +6,17 @@
     margin-top: 20px;
 }
 
+.table-hover > tbody tr:hover {
+    opacity: .5;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.edit-icon {
+    font-size: 20px;
+    color: #000000;
+}
+
 .table-hover tr > td {
     text-align: center;
 }
@@ -15,7 +26,7 @@
     color: #000000;
 }
 
-.table-hover > thead > tr > td {
+.table-hover > thead > tr > th {
     font-weight: 600;
     background-color: #337AB7;
     color: #FFFFFF;
