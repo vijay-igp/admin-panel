@@ -7,16 +7,39 @@ import { NgForm, NgModel } from '@angular/forms';
   styleUrls: ['./order-details.component.css']
 })
 export class OrderDetailsComponent implements OnInit {
-  name: string;
-  description: string;
-  type: any = {name: ''};
-  quantity: number;
-  price: string;
+  order: any;
+  selectedStatus: string = '';
+  orderStatuses = [
+      {id: 'active', name: 'Active'},
+      {id: 'pending', name: 'Pending'},
+      {id: 'cancelled', name: 'Cancelled'}
+  ];
+  fileName: string;
+  fileContents: any;
 
   constructor() { }
 
   ngOnInit() {
-    this.name = 'Omkar';
+    this.order = {};
+    this.order['description'] = '';
+    this.order['selectedStatus'] = '';
+  }
+
+  uploadFile(event, index) {
+    console.log('Target obj=>', event, index);
+    
+    if(event.target.files && event.target.files[0]) {
+      this.fileName = event.target.files[0].name;
+      console.log('File name: ', this.fileName, ', path: ', event.target.value);
+    }
+  }
+
+  fileClick(event, index) {
+    console.log('fileClick event ==>', event, index);
+  }
+
+  saveOrder() {
+
   }
 
 }
