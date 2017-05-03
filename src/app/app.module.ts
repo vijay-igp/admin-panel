@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { DropdownModule } from 'ng2-bootstrap';
+import { BsDropdownModule } from 'ng2-bootstrap';
 import { SelectModule } from 'ng2-select';
 import { OrdermModule } from './orderm/orderm.module';
 
@@ -51,7 +51,7 @@ import { RegisterComponent } from './register/register.component';
     FormsModule,
     HttpModule,
     routing,
-    DropdownModule.forRoot(),
+    BsDropdownModule.forRoot(),
     SelectModule,
     OrdermModule
   ],
