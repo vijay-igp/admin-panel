@@ -18,16 +18,14 @@
         <div class="collapse navbar-collapse navbar-collapse-toolbar" id="site-navbar-collapse">
           <!-- Navbar Toolbar -->
           <ul class="nav navbar-toolbar">
-            <li class="hidden-float" id="toggleMenubar">
-              <a data-toggle="menubar" [routerLink]="['/home']" role="button" tabindex="1">
-                <i class="icon hamburger hamburger-arrow-left">
+            <li class="page-title" id="toggleMenubar">
+              <a data-toggle="menubar" [routerLink]="['/dashboard']" role="button" tabindex="1">
+                <!--<i class="icon hamburger hamburger-arrow-left">
                   <span class="sr-only">Toggle menubar</span>
                   <span class="hamburger-bar"></span>
-                </i>
+                </i>-->
+                Admin Panel
               </a>
-            </li>
-            <li class="page-title">
-              Admin Panel
             </li>
             <li class="module-option" routerLinkActive="active"><a [routerLink]="['/form']">Form</a></li>
             <li class="module-option" routerLinkActive="active"><a [routerLink]="['/product_upload']">Attribution</a></li>

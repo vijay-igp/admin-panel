@@ -10457,4 +10457,7 @@ h4.example-title {
   }
 }
 
+.navbar-default .navbar-toolbar>li>a {
+  color: #ffffff;
+}
 
