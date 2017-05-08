@@ -1,0 +1,23 @@
+.main-header {
+    background-color: #C3404E;
+    border-radius: 0;
+}
+
+/*.logout {
+    font-size: 12px;
+}*/
+
+.main-header * {
+    color: #ffffff;
+    /*font-weight: 400;*/
+}
+
+.navbar-brand {
+    padding: 16px 20px;
+    font-weight: 500;
+}
+
+.logout {
+    color: white;
+    font-size: 16px;
+}

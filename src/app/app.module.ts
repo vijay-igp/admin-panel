@@ -33,6 +33,8 @@ import { LotDetailsComponent } from './lot-details/lot-details.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { MainHeaderComponent } from './main-header/main-header.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +46,9 @@ import { RegisterComponent } from './register/register.component';
     LotDetailsComponent,
     LoginComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    DashboardComponent,
+    MainHeaderComponent
   ],
   imports: [
     BrowserModule,
