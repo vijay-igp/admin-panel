@@ -9,7 +9,7 @@
           <label for="description">Description</label>
           <input type="text" id="description" class="form-control" maxlength="100" name="description">
 
-          <div>{{description}}</div>
+          <!--<div>{{description}}</div>-->
 
           <!--Validation for description-->
           <!--<div *ngIf="description.errors && (description.dirty || description.touched)">
@@ -42,7 +42,7 @@
           <label class="file-upload">
             <!--<span>Upload</span>-->
             <img src="../../../assets/images/upload.png" width="30" height="30">
-            <input type="file" class="uploadfile hidden" (click)="fileClick($event, i)" (change)="uploadFile($event, i)">
+            <input type="file" class="uploadfile hidden" (click)="fileClick($event)" (change)="uploadFile($event)">
             <p>{{fileName}}</p>
           </label>
         </div>

@@ -14,11 +14,11 @@
           <p>pristine: {{name.pristine}}, dirty: {{name.dirty}}</p>
           <p>untouched: {{name.untouched}}, touched: {{name.touched}}</p>
 
-          <div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
+          <!--<div *ngIf="name.errors && (name.dirty || name.touched)" class="alert alert-danger">
             <div [hidden]="!name.errors.required">Field should not be empty</div>
             <div [hidden]="!name.errors.minlength">Minimum 3 characters</div>
             <div [hidden]="!name.errors.maxlength">Maximum 25 characters</div>            
-          </div>
+          </div>-->
         </div>
 
         <div class="form-group">
@@ -27,9 +27,9 @@
 
           <div>{{product.description}}</div>
 
-          <div *ngIf="description.errors && (description.dirty || description.touched)">
+          <!--<div *ngIf="description.errors && (description.dirty || description.touched)">
             <div [hidden]="!description.errors.maxlength"></div>
-          </div>
+          </div>-->
         </div>
 
         <div class="form-group">

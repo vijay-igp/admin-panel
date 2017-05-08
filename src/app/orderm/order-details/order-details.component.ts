@@ -38,8 +38,8 @@ export class OrderDetailsComponent implements OnInit {
     console.log('XLSX object: ', XLSX);
   }
 
-  uploadFile(event, index) {
-    console.log('Target obj=>', event.target, index);
+  uploadFile(event) {
+    console.log('Target obj=>', event.target);
     this.fileContents = XLSX.read(event.target.data.d, {type: event.target.data.b ? 'binary' : 'base64'});
     
     if(event.target.files && event.target.files[0]) {
@@ -48,8 +48,8 @@ export class OrderDetailsComponent implements OnInit {
     }
   }
 
-  fileClick(event, index) {
-    console.log('fileClick event ==>', event, index);
+  fileClick(event) {
+    console.log('fileClick event ==>', event);
   }
 
   saveOrder() {
