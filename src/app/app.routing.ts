@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { AuthGuard } from 'services/auth-guard.service';
 
 const route: Routes = [
-    { path: '', component: HomeComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
     { path: 'product_upload', component: MetricsListComponent, canActivate: [AuthGuard] },
     { path: 'form', component: FormValidationComponent },
     { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard],
@@ -23,7 +23,7 @@ const route: Routes = [
     },
     { path: 'login', component: LoginComponent },
     { path: 'register', component: RegisterComponent },
-    { path: 'dashboard', component: DashboardComponent },
+    { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
 
     // otherwise redirect to home
     { path: '**', redirectTo: '' }

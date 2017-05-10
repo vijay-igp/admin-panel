@@ -1,0 +1,19 @@
+<div class="container-fluid dashboard-tabs">
+  <div class="col-md-5">
+    <ul class="nav nav-pills">
+        <li [ngClass]="{'active': activeTab === 1}" (click)="selectTab($event, 1)">
+          <a href="#">All Orders</a>
+        </li>
+        <li [ngClass]="{'active': activeTab === 2}" (click)="selectTab($event, 2)">
+          <a href="#">No breach in SLA</a>
+        </li>
+        <li [ngClass]="{'active': activeTab === 3}" (click)="selectTab($event, 3)">
+          <a href="#">High Alert|Action</a>
+        </li>
+    </ul>
+  </div>
+  <div class="col-md-2"></div>
+  <div class="col-md-4">
+    <input type="text" class="input-right" placeholder="Search by Order Number" value="hello">
+  </div>
+</div>

@@ -1,0 +1,29 @@
+.welcome-message {
+    padding: 20px;
+}
+
+.container-fluid p {
+    font-size: 16px;
+}
+
+.dashboard-content {
+    box-sizing: border-box;
+    background-color: #F2F2F2;
+    padding: 10px;
+}
+
+.table-wrapper {
+    padding: 10px;
+    background-color: white;
+}
+
+.dashboard-table {
+    padding: 10px;
+    border: 2px solid #F2F2F2;
+}
+
+.footer {
+    text-align: center;
+    text-decoration: underline;
+    margin: 20px 0;
+}

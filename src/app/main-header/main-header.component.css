@@ -7,6 +7,10 @@
     font-size: 12px;
 }*/
 
+.navbar {
+    margin-bottom: 0;
+}
+
 .main-header * {
     color: #ffffff;
     /*font-weight: 400;*/
@@ -20,4 +24,8 @@
 .logout {
     color: white;
     font-size: 16px;
+}
+
+.logout:hover {
+    color: white;
 }
