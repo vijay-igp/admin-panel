@@ -18,8 +18,24 @@
 }
 
 .dashboard-table {
-    padding: 10px;
-    border: 2px solid #F2F2F2;
+    /*padding: 10px;*/
+    border: 2px solid #E0E0E0;
+}
+
+.dashboard-table > .row > .cell:nth-of-type(1) {
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.dashboard-table > .row:nth-of-type(1) {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.cell {
+    border: 2px solid #E0E0E0;
+    line-height: 60px;
 }
 
 .footer {
