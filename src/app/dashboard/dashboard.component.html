@@ -1,11 +1,12 @@
 <div class="container-fluid">
-  <div class="row welcome-message">
+  <div class="row padding-extra">
     <p>Hi VendorName</p>
     <p>Below is the schedule of orders you need to fulfill</p>
   </div>
   <div class="row dashboard-content">
     <div class="table-wrapper">
       <div class="container-fluid dashboard-table">
+        <!--Table header-->
         <div class="row">
           <div class="cell col-md-3">Order Type</div>
           <div class="cell col-md-2">Deliver for Today</div>
@@ -13,15 +14,24 @@
           <div class="cell col-md-2">Future Deliveries</div>
           <div class="cell col-md-3">By Date: </div>
         </div>
+
+        <!--Table content-->
         <div class="row">
           <div class="cell col-md-3">New Orders</div>
-          <div class="cell col-md-2">Deliver for Today</div>
+
+          <div class="cell col-md-2">
+            <div class="btn btn-primary custom-button">
+              <!--<span class="">8 Take action</span>-->
+              8<br> View Orders
+            </div>
+          </div>
           <div class="cell col-md-2">Deliver for Tomorrow</div>
           <div class="cell col-md-2">Future Deliveries</div>
           <div class="cell col-md-3">By Date: </div>
         </div>
         <div class="row">
           <div class="cell col-md-3">Confirm</div>
+
           <div class="cell col-md-2">Deliver for Today</div>
           <div class="cell col-md-2">Deliver for Tomorrow</div>
           <div class="cell col-md-2">Future Deliveries</div>
@@ -29,6 +39,7 @@
         </div>
         <div class="row">
           <div class="cell col-md-3">Out For Delivery</div>
+
           <div class="cell col-md-2">Deliver for Today</div>
           <div class="cell col-md-2">Deliver for Tomorrow</div>
           <div class="cell col-md-2">Future Deliveries</div>
@@ -36,12 +47,16 @@
         </div>
         <div class="row">
           <div class="cell col-md-3">Delivered Orders</div>
+
           <div class="cell col-md-2">Deliver for Today</div>
           <div class="cell col-md-2">Deliver for Tomorrow</div>
           <div class="cell col-md-2">Future Deliveries</div>
           <div class="cell col-md-3">By Date: </div>
         </div>
       </div>
+    </div>
+    <div class="padding-extra">
+      <p class="sla-message">* Warning Message in case of breach in SLA. Clicking on this opens up the breached orders list</p>
     </div>
   </div>
   <div class="row footer">

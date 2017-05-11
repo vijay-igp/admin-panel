@@ -1,5 +1,10 @@
-.welcome-message {
-    padding: 20px;
+.padding-extra {
+    padding: 10px 20px;
+}
+
+.sla-message {
+    color: #C3404E;
+    text-decoration: underline;
 }
 
 .container-fluid p {
@@ -15,6 +20,7 @@
 .table-wrapper {
     padding: 10px;
     background-color: white;
+    box-shadow: 0 1px 3px #888888;
 }
 
 .dashboard-table {
@@ -35,11 +41,29 @@
 
 .cell {
     border: 2px solid #E0E0E0;
-    line-height: 60px;
+    line-height: 65px;
+}
+
+.cell-btn {
+    padding: 10px!important;
 }
 
 .footer {
     text-align: center;
     text-decoration: underline;
-    margin: 20px 0;
+    margin: 20px 0 0;
+}
+
+.custom-button {
+    /*padding-bottom: 10px;*/
+    /*box-sizing: border-box;*/
+    height: 46px;
+    width: 175px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #EFEFEF;
+    color: #000000;
+    border: none;
+    box-shadow: 0 1px 3px #888888;
 }
