@@ -37,6 +37,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { HeaderTabsComponent } from './header-tabs/header-tabs.component';
 import { FooterComponent } from './footer/footer.component';
+import { OrdersButtonComponent } from './orders-button/orders-button.component';
 
 @NgModule({
   declarations: [
@@ -52,7 +53,8 @@ import { FooterComponent } from './footer/footer.component';
     DashboardComponent,
     MainHeaderComponent,
     HeaderTabsComponent,
-    FooterComponent
+    FooterComponent,
+    OrdersButtonComponent
   ],
   imports: [
     BrowserModule,

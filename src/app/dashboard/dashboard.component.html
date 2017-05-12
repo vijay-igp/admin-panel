@@ -20,23 +20,29 @@
           <div class="cell col-md-3 alert-action">New Orders</div>
 
           <div class="cell col-md-2 custom-btn-parent">
-            <div class="btn btn-primary custom-button bg-igp text-white">
-              <!--<span class="">8 Take action</span>-->
-                <div>8</div>
-                <div>View Orders</div>
-            </div>
+            <app-orders-button></app-orders-button>
           </div>
-          <div class="cell col-md-2">Deliver for Tomorrow</div>
-          <div class="cell col-md-2">Future Deliveries</div>
-          <div class="cell col-md-3">By Date: </div>
+          <div class="cell col-md-2 custom-btn-parent">
+            <app-orders-button></app-orders-button>
+          </div>
+          <div class="cell col-md-2 no-orders">No new orders</div>
+          <div class="cell col-md-3 no-orders">No new orders</div>
         </div>
         <div class="row">
           <div class="cell col-md-3 no-action">Confirm</div>
 
-          <div class="cell col-md-2">Deliver for Today</div>
-          <div class="cell col-md-2">Deliver for Tomorrow</div>
-          <div class="cell col-md-2">Future Deliveries</div>
-          <div class="cell col-md-3">By Date: </div>
+          <div class="cell col-md-2 custom-btn-parent">
+            <app-orders-button></app-orders-button>
+          </div>
+          <div class="cell col-md-2 custom-btn-parent">
+            <app-orders-button></app-orders-button>
+          </div>
+          <div class="cell col-md-2 custom-btn-parent">
+            <app-orders-button></app-orders-button>
+          </div>
+          <div class="cell col-md-3 custom-btn-parent">
+            <app-orders-button></app-orders-button>
+          </div>
         </div>
         <div class="row">
           <div class="cell col-md-3 alert-action">Out For Delivery</div>
@@ -53,7 +59,7 @@
                 <div class="line-height">Total orders for today's delivery - 10</div>
               </div>
               <div class="col-md-4 col-md-offset-1">
-                <div class="btn btn-primary custom-button">
+                <div class="btn btn-primary custom-button view-all">
                   View all delivered orders
                 </div>
               </div>
