@@ -36,6 +36,7 @@ import { RegisterComponent } from './register/register.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { MainHeaderComponent } from './main-header/main-header.component';
 import { HeaderTabsComponent } from './header-tabs/header-tabs.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -50,7 +51,8 @@ import { HeaderTabsComponent } from './header-tabs/header-tabs.component';
     RegisterComponent,
     DashboardComponent,
     MainHeaderComponent,
-    HeaderTabsComponent
+    HeaderTabsComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
