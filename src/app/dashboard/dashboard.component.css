@@ -1,14 +1,15 @@
 .padding-extra {
-    padding: 10px 20px;
+    padding: 10px 20px 0;
 }
 
 .sla-message {
     color: #C3404E;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 .container-fluid p {
-    font-size: 16px;
+    font-size: 15px;
 }
 
 .dashboard-content {
@@ -18,13 +19,12 @@
 }
 
 .table-wrapper {
-    padding: 10px;
+    padding: 20px;
     background-color: white;
     box-shadow: 0 1px 3px #888888;
 }
 
 .dashboard-table {
-    /*padding: 10px;*/
     border: 2px solid #E0E0E0;
 }
 
@@ -70,8 +70,23 @@
     box-shadow: 0 1px 3px #888888;
 }
 
-.custom-btn-parent{
+.custom-btn-parent {
     padding-left:0.5em;
     padding-right:0.5em;
+}
 
+.view-button {
+    align-content: center;
+}
+
+.line-height {
+    line-height: 200%;
+}
+
+.alert-action {
+    border-left: 15px solid #C3404E;
+}
+
+.no-action {
+    border-left: 15px solid white;
 }
