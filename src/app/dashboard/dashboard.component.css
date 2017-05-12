@@ -57,13 +57,21 @@
 .custom-button {
     /*padding-bottom: 10px;*/
     /*box-sizing: border-box;*/
-    height: 46px;
-    width: 175px;
+    /*height: 46px;*/
+    margin-top: -5px;
+    border-radius:0;
+    width: 100%;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
-    background-color: #EFEFEF;
+    /*background-color: #EFEFEF;*/
     color: #000000;
     border: none;
     box-shadow: 0 1px 3px #888888;
+}
+
+.custom-btn-parent{
+    padding-left:0.5em;
+    padding-right:0.5em;
+
 }

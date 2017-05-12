@@ -5,4 +5,30 @@
 /*@import 'custom_css/site.css';
 @import 'custom_css/custom.css';*/
 
+/* Utility css start */
+.no-padding{
+    padding : 0 ! important;
+}
+
+.no-margin{
+    margin : 0 ! important;
+}
+
+.bg-grey{
+    background-color: #EFEFEF! important;
+}
+
+.bg-igp{
+    background-color: #C3404E! important;
+}
+
+.text-igp{
+    color: #C3404E! important;
+}
+
+.text-white{
+    color:#ffffff! important;
+}
+/* Utility css end */
+
 
