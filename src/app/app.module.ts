@@ -6,7 +6,6 @@ import { HttpModule } from '@angular/http';
 import { BsDropdownModule } from 'ng2-bootstrap';
 import { SelectModule } from 'ng2-select';
 import { MyDatePickerModule } from 'mydatepicker';
-import { OrdermModule } from './orderm/orderm.module';
 
 // used to create fake backend
 import { fakeBackendProvider } from 'helpers/fake-backend';
@@ -15,10 +14,7 @@ import { BaseRequestOptions } from '@angular/http';
 
 // Router and Services
 import { routing } from "./app.routing";
-import { MetricService } from 'services/metric.service';
-import { ProductService } from 'services/product.service';
 import { BackendService } from 'services/backend.service';
-import { LotDataService } from 'services/lot-data.service';
 import { Logger } from 'services/logger.service';
 import { AuthenticationService } from 'services/authentication.service';
 import { AuthGuard } from 'services/auth-guard.service';
@@ -27,10 +23,7 @@ import { UserService } from 'services/user.service';
 // Components
 import { AppComponent } from './app.component';
 import { MenuBarComponent } from './menu-bar/menu-bar.component';
-import { MetricsListComponent } from './metrics-list/metrics-list.component';
-import { LotRowComponent } from './lot-row/lot-row.component';
 import { FormValidationComponent } from './form/form.component';
-import { LotDetailsComponent } from './lot-details/lot-details.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -44,10 +37,7 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
   declarations: [
     AppComponent,
     MenuBarComponent,
-    MetricsListComponent,
-    LotRowComponent,
     FormValidationComponent,
-    LotDetailsComponent,
     LoginComponent,
     HomeComponent,
     RegisterComponent,
@@ -64,14 +54,10 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
     routing,
     BsDropdownModule.forRoot(),
     SelectModule,
-    OrdermModule,
     MyDatePickerModule
   ],
   providers: [
     BackendService,
-    MetricService,
-    ProductService,
-    LotDataService,
     Logger,
     AuthenticationService,
     AuthGuard,

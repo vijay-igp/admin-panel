@@ -1,7 +1,6 @@
 import { Component, ElementRef, OnInit, DoCheck, ViewChild } from '@angular/core';
 import { NgForm, NgModel } from '@angular/forms';
 import { Product } from 'classes/product';
-import { ProductService } from 'services/product.service';
 declare var $:any;
 
 @Component({
@@ -16,11 +15,8 @@ export class FormValidationComponent implements OnInit, DoCheck {
   products: any[];
   productTypes: any[];
   product: Product;
-  // items: any[];
-  // value: any = {};
 
   constructor(
-    private service: ProductService,
     elementRef: ElementRef
   ) {
     this.elementRef = elementRef;
@@ -37,13 +33,6 @@ export class FormValidationComponent implements OnInit, DoCheck {
       {id: 'type5', name: 'Type 5'}
     ];
 
-    // this.items = [
-    //   {id: 'type1', text: 'Type 1'},
-    //   {id: 'type2', text: 'Type 2'},
-    //   {id: 'type3', text: 'Type 3'},
-    //   {id: 'type4', text: 'Type 4'},
-    //   {id: 'type5', text: 'Type 5'}
-    // ];
     this.product = new Product();
     this.product.type = "";
     console.log('product object ==>', this.product);
@@ -58,14 +47,6 @@ export class FormValidationComponent implements OnInit, DoCheck {
 
     clearTimeout(timer);
   }
-
-  // selected(value: any): void {
-  //   console.log('selected value: ', value);
-  // }
-
-  // refreshValue(value: any): void {
-  //   this.value = value;
-  // }
 
   ngDoCheck() {}
 
