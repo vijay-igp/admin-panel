@@ -44,6 +44,10 @@
     line-height: 65px;
 }
 
+.out-for-delivery {
+    line-height: 68px;
+}
+
 .cell-btn {
     padding: 10px!important;
 }
@@ -64,12 +68,8 @@
     padding-right:0.5em;
 }
 
-.no-orders {
+.center-align {
     text-align: center;
-}
-
-.view-button {
-    align-content: center;
 }
 
 .line-height {
@@ -84,7 +84,6 @@
     border-left: 15px solid white;
 }
 
-.view-all {
-    color: white;
+.underline {
     text-decoration: underline;
 }
