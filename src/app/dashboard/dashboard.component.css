@@ -2,6 +2,14 @@
     padding: 10px 20px 0;
 }
 
+.no-padding {
+    padding: 0;
+}
+
+.date-picker {
+    margin-top: 10;
+}
+
 .sla-message {
     color: #C3404E;
     text-decoration: underline;

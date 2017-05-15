@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { BsDropdownModule } from 'ng2-bootstrap';
 import { SelectModule } from 'ng2-select';
+import { MyDatePickerModule } from 'mydatepicker';
 import { OrdermModule } from './orderm/orderm.module';
 
 // used to create fake backend
@@ -63,7 +64,8 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
     routing,
     BsDropdownModule.forRoot(),
     SelectModule,
-    OrdermModule
+    OrdermModule,
+    MyDatePickerModule
   ],
   providers: [
     BackendService,
