@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 @Component({
   selector: 'app-footer',
   template: `<div class="row footer">
-                <p>&copy; IGP.com - Intermesh Pvt Ltd. - 2017</p>
+                <div class="col-md-6 col-md-offset-3 underline">&copy; IGP.com - Intermesh Pvt Ltd. - 2017</div>
             </div>`,
   styles: [`.footer{
               bottom:0;

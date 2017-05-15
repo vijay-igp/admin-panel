@@ -1,87 +1,91 @@
+<app-header-tabs></app-header-tabs>
+
 <div class="container-fluid">
   <div class="row padding-extra">
     <p>Hi VendorName</p>
     <p>Below is the schedule of orders you need to fulfill</p>
   </div>
   <div class="row dashboard-content">
-    <div class="table-wrapper">
-      <div class="container-fluid dashboard-table">
-        <!--Table header-->
-        <div class="row">
-          <div class="cell col-md-3">Order Type</div>
-          <div class="cell col-md-2 center-align">Deliver for Today</div>
-          <div class="cell col-md-2 center-align">Deliver for Tomorrow</div>
-          <div class="cell col-md-2 center-align">Future Deliveries</div>
-          <div class="cell col-md-3">
-            <div class="col-md-4 no-padding">By Date: </div>
-            <div class="col-md-8 no-padding date-picker">
-              <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="dateRange"></my-date-picker>
-            </div>
-          </div>
-        </div>
-
-        <!--Table content-->
-        <div class="row">
-          <div class="cell col-md-3 alert-action">New Orders</div>
-
-          <div class="cell col-md-2 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-          <div class="cell col-md-2 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-          <div class="cell col-md-2 center-align">No new orders</div>
-          <div class="cell col-md-3 center-align">No new orders</div>
-        </div>
-        <div class="row">
-          <div class="cell col-md-3 no-action">Confirm</div>
-
-          <div class="cell col-md-2 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-          <div class="cell col-md-2 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-          <div class="cell col-md-2 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-          <div class="cell col-md-3 custom-btn-parent">
-            <app-orders-button></app-orders-button>
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell col-md-3 alert-action">Out For Delivery</div>
-
-          <div class="cell col-md-9">
-            <div class="col-md-2">
-              <app-orders-button></app-orders-button>
-            </div>
-            <div class="col-md-2">
-              <app-orders-button></app-orders-button>
-            </div>
-            <div class="col-md-2">
-              <app-orders-button></app-orders-button>
-            </div>
-            <div class="col-md-2">
-              <app-orders-button></app-orders-button>
-            </div>
-            <div class="col-md-4 underline center-align">
-              <a href="#" (click)="openPanel($event, 'ofd')">View All Out for delivery orders</a>
-            </div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="cell col-md-3 no-action">Delivered Orders</div>
-
-          <div class="cell col-md-9">
-            <div class="row">
-              <div class="col-md-7">
-                <div class="line-height">Orders delivered today - 6</div>
-                <div class="line-height">Total orders for today's delivery - 10</div>
+    <div class="col-md-11">
+      <div class="table-wrapper">
+        <div class="container-fluid dashboard-table">
+          <!--Table header-->
+          <div class="row">
+            <div class="cell col-md-3">Order Type</div>
+            <div class="cell col-md-2 center-align">Deliver for Today</div>
+            <div class="cell col-md-2 center-align no-padding">Deliver for Tomorrow</div>
+            <div class="cell col-md-2 center-align">Future Deliveries</div>
+            <div class="cell col-md-3">
+              <div class="col-md-4 no-padding">By Date: </div>
+              <div class="col-md-8 no-padding custom-date-picker">
+                <my-date-picker name="mydate" [options]="myDatePickerOptions" [(ngModel)]="dateRange" (dateChanged)="onDateChanged($event)"></my-date-picker>
               </div>
-              <div class="col-md-4 col-md-offset-1">
-                <div class="btn btn-primary custom-button underline" (click)="openPanel($event, 'delivered')">
-                  View all delivered orders
+            </div>
+          </div>
+
+          <!--Table content-->
+          <div class="row">
+            <div class="cell col-md-3 alert-action">New Orders</div>
+
+            <div class="cell col-md-2 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+            <div class="cell col-md-2 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+            <div class="cell col-md-2 center-align">No new orders</div>
+            <div class="cell col-md-3 center-align">No new orders</div>
+          </div>
+          <div class="row">
+            <div class="cell col-md-3 no-action">Confirm</div>
+
+            <div class="cell col-md-2 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+            <div class="cell col-md-2 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+            <div class="cell col-md-2 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+            <div class="cell col-md-3 custom-btn-parent">
+              <app-orders-button></app-orders-button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell col-md-3 alert-action">Out For Delivery</div>
+
+            <div class="cell col-md-9 no-padding">
+              <div class="col-md-2">
+                <app-orders-button></app-orders-button>
+              </div>
+              <div class="col-md-2">
+                <app-orders-button></app-orders-button>
+              </div>
+              <div class="col-md-2">
+                <app-orders-button></app-orders-button>
+              </div>
+              <div class="col-md-2">
+                <app-orders-button></app-orders-button>
+              </div>
+              <div class="col-md-4 underline center-align">
+                <a href="#" (click)="openPanel($event, 'ofd')">View All Out for delivery orders</a>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="cell col-md-3 no-action">Delivered Orders</div>
+
+            <div class="cell col-md-9">
+              <div class="row">
+                <div class="col-md-7">
+                  <div class="line-height">Orders delivered today - 6</div>
+                  <div class="line-height">Total orders for today's delivery - 10</div>
+                </div>
+                <div class="col-md-4 col-md-offset-1">
+                  <div class="btn btn-primary custom-button underline" (click)="openPanel($event, 'delivered')">
+                    View all delivered orders
+                  </div>
                 </div>
               </div>
             </div>
@@ -89,6 +93,8 @@
         </div>
       </div>
     </div>
+  </div>
+  <div class="row dashboard-content no-padding">
     <div class="padding-extra">
       <p class="sla-message">* Warning Message in case of breach in SLA. Clicking on this opens up the breached orders list</p>
     </div>

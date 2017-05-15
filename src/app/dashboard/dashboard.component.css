@@ -2,11 +2,7 @@
     padding: 10px 20px 0;
 }
 
-.no-padding {
-    padding: 0;
-}
-
-.date-picker {
+.custom-date-picker {
     margin-top: 10;
 }
 
@@ -23,7 +19,7 @@
 .dashboard-content {
     box-sizing: border-box;
     background-color: #F2F2F2;
-    padding: 10px;
+    padding: 10px 0;
 }
 
 .table-wrapper {
@@ -90,8 +86,4 @@
 
 .no-action {
     border-left: 15px solid white;
-}
-
-.underline {
-    text-decoration: underline;
 }
