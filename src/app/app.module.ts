@@ -22,7 +22,6 @@ import { UserService } from 'services/user.service';
 
 // Components
 import { AppComponent } from './app.component';
-import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { FormValidationComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
@@ -36,7 +35,6 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
 @NgModule({
   declarations: [
     AppComponent,
-    MenuBarComponent,
     FormValidationComponent,
     LoginComponent,
     HomeComponent,
