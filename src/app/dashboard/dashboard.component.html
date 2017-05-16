@@ -28,28 +28,28 @@
             <div class="cell col-md-3 alert-action">New Orders</div>
 
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
             </div>
             <div class="cell col-md-2 center-align">No new orders</div>
             <div class="cell col-md-3 center-align">No new orders</div>
           </div>
           <div class="row">
-            <div class="cell col-md-3 no-action">Confirm</div>
+            <div class="cell col-md-3 no-action">Confirmed</div>
 
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="confirmed" [deliveryTime]="today"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="confirmed" [deliveryTime]="tomorrow"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="confirmed" [deliveryTime]="future"></app-orders-button>
             </div>
             <div class="cell col-md-3 custom-btn-parent">
-              <app-orders-button></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="confirmed" [deliveryTime]="bydate"></app-orders-button>
             </div>
           </div>
           <div class="row">
@@ -57,16 +57,16 @@
 
             <div class="cell col-md-9 no-padding">
               <div class="col-md-2">
-                <app-orders-button></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
               </div>
               <div class="col-md-2">
-                <app-orders-button></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
               </div>
               <div class="col-md-2">
-                <app-orders-button></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
               </div>
               <div class="col-md-2">
-                <app-orders-button></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
               </div>
               <div class="col-md-4 underline center-align">
                 <a href="#" (click)="openPanel($event, 'ofd')">View All Out for delivery orders</a>

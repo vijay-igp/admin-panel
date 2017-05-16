@@ -19,6 +19,7 @@ import { Logger } from 'services/logger.service';
 import { AuthenticationService } from 'services/authentication.service';
 import { AuthGuard } from 'services/auth-guard.service';
 import { UserService } from 'services/user.service';
+import { DashboardService } from 'services/dashboard.service';
 
 // Components
 import { AppComponent } from './app.component';
@@ -60,6 +61,7 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
     AuthenticationService,
     AuthGuard,
     UserService,
+    DashboardService,
 
     // providers used to create fake backend
     fakeBackendProvider,
