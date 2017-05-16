@@ -11,6 +11,7 @@ export class DashboardComponent implements OnInit {
   private displayStr: string;
   private ordersCount: number;
   private dashboardData: Object;
+  private masterData: Object;
 
   private myDatePickerOptions: IMyOptions = {
     // other options...
@@ -27,6 +28,7 @@ export class DashboardComponent implements OnInit {
     this.ordersCount = 8;
 
     this.dashboardData = this.dashboardService.getDashboardData();
+    this.masterData = this.dashboardService.getMasterData();
   }
 
   openPanel(e, status) {

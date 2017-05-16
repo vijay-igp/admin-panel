@@ -30,7 +30,7 @@ export class OrdersButtonComponent implements OnInit {
 
   ngOnInit() {
     console.log('displayData>>>', this.displayData, ', ', this.orderStatus, ', ', this.deliveryTime);
-    this.isAlert = false;    
+    this.isAlert = this.displayData['isAlert'];
   }
 
 }

@@ -25,35 +25,35 @@
 
           <!--Table content-->
           <div class="row">
-            <div class="cell col-md-3 alert-action">New Orders</div>
+            <div class="cell col-md-3 alert-action">{{masterData.displayStatuses[0]}}</div>
 
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]"></app-orders-button>
             </div>
             <div class="cell col-md-2 center-align">No new orders</div>
             <div class="cell col-md-3 center-align">No new orders</div>
           </div>
           <div class="row">
-            <div class="cell col-md-3 no-action">Confirmed</div>
+            <div class="cell col-md-3 no-action">{{masterData.displayStatuses[1]}}</div>
 
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="confirmed" [deliveryTime]="today"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="confirmed" [deliveryTime]="tomorrow"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
             </div>
             <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="confirmed" [deliveryTime]="future"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
             </div>
             <div class="cell col-md-3 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="confirmed" [deliveryTime]="bydate"></app-orders-button>
+              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
             </div>
           </div>
           <div class="row">
-            <div class="cell col-md-3 alert-action">Out For Delivery</div>
+            <div class="cell col-md-3 alert-action">{{masterData.displayStatuses[2]}}</div>
 
             <div class="cell col-md-9 no-padding">
               <div class="col-md-2">
@@ -63,27 +63,27 @@
                 <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
               </div>
               <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
               </div>
               <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
+                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
               </div>
               <div class="col-md-4 underline center-align">
-                <a href="#" (click)="openPanel($event, 'ofd')">View All Out for delivery orders</a>
+                <a href="#" (click)="openPanel($event, masterData.statuses[2])">View All Out for delivery orders</a>
               </div>
             </div>
           </div>
           <div class="row">
-            <div class="cell col-md-3 no-action">Delivered Orders</div>
+            <div class="cell col-md-3 no-action">{{masterData.displayStatuses[3]}}</div>
 
             <div class="cell col-md-9">
               <div class="row">
                 <div class="col-md-7">
-                  <div class="line-height">Orders delivered today - 6</div>
-                  <div class="line-height">Total orders for today's delivery - 10</div>
+                  <div class="line-height">Orders delivered today - {{dashboardData.delivered.today}}</div>
+                  <div class="line-height">Total orders for today's delivery - {{dashboardData.delivered.total}}</div>
                 </div>
                 <div class="col-md-4 col-md-offset-1">
-                  <div class="btn btn-primary custom-button underline" (click)="openPanel($event, 'delivered')">
+                  <div class="btn btn-primary custom-button underline" (click)="openPanel($event, masterData.statuses[3])">
                     View all delivered orders
                   </div>
                 </div>
