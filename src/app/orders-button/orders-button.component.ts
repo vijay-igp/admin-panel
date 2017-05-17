@@ -3,14 +3,13 @@ import { Component, OnInit, Input } from '@angular/core';
 @Component({
   selector: 'app-orders-button',
   template: `<div class="btn btn-primary orders-button" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert, 'text-bold': orderStatus === 'new'}">
-                <div>{{displayData.ordersCount}}</div>
+                <ng-content></ng-content>
                 <div>{{displayData.displayStr}}</div>
             </div>`,
   styles: [`.orders-button {
               margin-top: -5px;
               border-radius:0;
               width: 100%;
-              min-width: 112px;
               font-size: 14px;
               text-align: center;
               border: none;

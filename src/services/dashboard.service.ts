@@ -9,7 +9,7 @@ export class DashboardService {
         return {
             displayStatuses: ["New Orders", "Confirmed", "Out for delivery", "Delivered orders"],
             statuses: ["new", "confirmed", "ofd", "delivered"],
-            deliveryTimes: ["today", "tomorrow", "future", "bydate"]
+            deliveryTimes: ["today", "tomorrow", "future", "bydate", "all"]
         }
     }
     
@@ -22,12 +22,12 @@ export class DashboardService {
                     isAlert: true
                 },
                 "tomorrow": {
-                    ordersCount: 0,
+                    ordersCount: 15,
                     displayStr: 'View Orders',
                     isAlert: false
                 },
                 "future": {
-                    ordersCount: 15,
+                    ordersCount: 0,
                     displayStr: 'View Orders',
                     isAlert: false
                 },
@@ -39,7 +39,7 @@ export class DashboardService {
             },
             "confirmed": {
                 "today": {
-                    ordersCount: 7,
+                    ordersCount: 24,
                     displayStr: 'View Orders',
                     isAlert: false
                 },
@@ -49,15 +49,59 @@ export class DashboardService {
                     isAlert: false
                 },
                 "future": {
-                    ordersCount: 15,
+                    ordersCount: 12,
                     displayStr: 'View Orders',
                     isAlert: false
                 },
                 "bydate": {
-                    ordersCount: 5,
+                    ordersCount: 3,
                     displayStr: 'View Orders',
                     isAlert: false
                 }
+            },
+            "ofd": {
+                orders: [
+                    {
+                        orderNumber: 'IG12345671',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345672',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: true
+                    },
+                    {
+                        orderNumber: 'IG12345673',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345674',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345675',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345676',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345677',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    },
+                    {
+                        orderNumber: 'IG12345678',
+                        displayStr: 'Mark as Delivered',
+                        isAlert: false
+                    }
+                ]
             },
             "delivered": {
                 today: 6,

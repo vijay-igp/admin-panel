@@ -27,48 +27,78 @@
           <div class="row">
             <div class="cell col-md-3 alert-action">{{masterData.displayStatuses[0]}}</div>
 
-            <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]"></app-orders-button>
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.today.ordersCount, 'center-align': !dashboardData.new.today.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.new.today.ordersCount">
+                <app-button-view [viewData]="dashboardData.new.today.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.new.today.ordersCount"></app-no-orders>
             </div>
-            <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]"></app-orders-button>
+
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.tomorrow.ordersCount, 'center-align': !dashboardData.new.tomorrow.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.new.tomorrow.ordersCount">
+                <app-button-view [viewData]="dashboardData.new.tomorrow.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.new.tomorrow.ordersCount"></app-no-orders>
             </div>
-            <div class="cell col-md-2 center-align">No new orders</div>
-            <div class="cell col-md-3 center-align">No new orders</div>
+
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.future.ordersCount, 'center-align': !dashboardData.new.future.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.new.future" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.new.future.ordersCount">
+                <app-button-view [viewData]="dashboardData.new.future.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.new.future.ordersCount"></app-no-orders>
+            </div>
+
+            <div class="cell col-md-3" [ngClass]="{'custom-btn-parent': dashboardData.new.bydate.ordersCount, 'center-align': !dashboardData.new.bydate.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.new.bydate" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.new.bydate.ordersCount">
+                <app-button-view [viewData]="dashboardData.new.bydate.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.new.bydate.ordersCount"></app-no-orders>
+            </div>
           </div>
+
           <div class="row">
             <div class="cell col-md-3 no-action">{{masterData.displayStatuses[1]}}</div>
 
-            <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.today.ordersCount, 'center-align': !dashboardData.confirmed.today.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.confirmed.today.ordersCount">
+                <app-button-view [viewData]="dashboardData.confirmed.today.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.confirmed.today.ordersCount"></app-no-orders>
             </div>
-            <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
+
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.tomorrow.ordersCount, 'center-align': !dashboardData.confirmed.tomorrow.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.confirmed.tomorrow.ordersCount">
+                <app-button-view [viewData]="dashboardData.confirmed.tomorrow.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.confirmed.tomorrow.ordersCount"></app-no-orders>
             </div>
-            <div class="cell col-md-2 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
+
+            <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.future.ordersCount, 'center-align': !dashboardData.confirmed.future.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.confirmed.future.ordersCount">
+                <app-button-view [viewData]="dashboardData.confirmed.future.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.confirmed.future.ordersCount"></app-no-orders>
             </div>
-            <div class="cell col-md-3 custom-btn-parent">
-              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]"></app-orders-button>
+
+            <div class="cell col-md-3" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.bydate.ordersCount, 'center-align': !dashboardData.confirmed.bydate.ordersCount}">
+              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.confirmed.bydate.ordersCount">
+                <app-button-view [viewData]="dashboardData.confirmed.bydate.ordersCount"></app-button-view>
+              </app-orders-button>
+              <app-no-orders [viewData]="dashboardData.confirmed.bydate.ordersCount"></app-no-orders>
             </div>
           </div>
           <div class="row">
             <div class="cell col-md-3 alert-action">{{masterData.displayStatuses[2]}}</div>
 
             <div class="cell col-md-9 no-padding">
-              <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="new" [deliveryTime]="today"></app-orders-button>
+              <div class="col-md-9 no-padding">
+                <div class="col-md-3 custom-btn-parent" *ngFor="let order of dashboardData.ofd.orders; let i='index'">
+                  <app-orders-button [displayData]="order" [orderStatus]="masterData.statuses[2]" [deliveryTime]="masterData.deliveryTimes[4]" *ngIf="i<4">
+                    <div>{{order.orderNumber}}</div>
+                  </app-orders-button>
+                </div>
               </div>
-              <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
-              </div>
-              <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
-              </div>
-              <div class="col-md-2">
-                <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="new" [deliveryTime]="tomorrow"></app-orders-button>
-              </div>
-              <div class="col-md-4 underline center-align">
+              <div class="col-md-3 underline center-align no-padding">
                 <a href="#" (click)="openPanel($event, masterData.statuses[2])">View All Out for delivery orders</a>
               </div>
             </div>
@@ -82,7 +112,7 @@
                   <div class="line-height">Orders delivered today - {{dashboardData.delivered.today}}</div>
                   <div class="line-height">Total orders for today's delivery - {{dashboardData.delivered.total}}</div>
                 </div>
-                <div class="col-md-4 col-md-offset-1">
+                <div class="col-md-5">
                   <div class="btn btn-primary custom-button underline" (click)="openPanel($event, masterData.statuses[3])">
                     View all delivered orders
                   </div>

@@ -23,7 +23,6 @@ import { DashboardService } from 'services/dashboard.service';
 
 // Components
 import { AppComponent } from './app.component';
-import { FormValidationComponent } from './form/form.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
@@ -32,11 +31,12 @@ import { MainHeaderComponent } from './main-header/main-header.component';
 import { HeaderTabsComponent } from './header-tabs/header-tabs.component';
 import { FooterComponent } from './footer/footer.component';
 import { OrdersButtonComponent } from './orders-button/orders-button.component';
+import { ButtonViewComponent } from './button-view/button-view.component';
+import { NoOrdersComponent } from './no-orders/no-orders.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FormValidationComponent,
     LoginComponent,
     HomeComponent,
     RegisterComponent,
@@ -44,7 +44,9 @@ import { OrdersButtonComponent } from './orders-button/orders-button.component';
     MainHeaderComponent,
     HeaderTabsComponent,
     FooterComponent,
-    OrdersButtonComponent
+    OrdersButtonComponent,
+    ButtonViewComponent,
+    NoOrdersComponent
   ],
   imports: [
     BrowserModule,
