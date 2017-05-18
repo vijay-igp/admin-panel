@@ -1,8 +1,8 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-orders-button',
-  template: `<div class="btn btn-primary orders-button" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert, 'text-bold': orderStatus === 'new'}">
+  template: `<div class="btn btn-primary orders-button" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert, 'text-bold': orderStatus === 'new'}" (click)="openOrdersTray($event)">
                 <ng-content></ng-content>
                 <div>{{displayData.displayStr}}</div>
             </div>`,
@@ -20,6 +20,7 @@ export class OrdersButtonComponent implements OnInit {
   @Input('displayData') displayData: Object;
   @Input('orderStatus') orderStatus: string;
   @Input('deliveryTime') deliveryTime: string;
+  @Output() onViewOrders: EventEmitter<any> = new EventEmitter();
   
   isAlert: Boolean;
   ordersCount: number;
@@ -30,6 +31,11 @@ export class OrdersButtonComponent implements OnInit {
   ngOnInit() {
     console.log('displayData>>>', this.displayData, ', ', this.orderStatus, ', ', this.deliveryTime);
     this.isAlert = this.displayData['isAlert'];
+  }
+
+  openOrdersTray(e) {
+    console.log('openOrdersTray called..........');
+    this.onViewOrders.emit(e);
   }
 
 }

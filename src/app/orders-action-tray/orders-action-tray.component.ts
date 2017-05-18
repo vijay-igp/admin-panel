@@ -1,5 +1,4 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-declare var $:any;
 
 @Component({
   selector: 'app-orders-action-tray',

@@ -28,7 +28,7 @@
             <div class="cell col-md-3" [ngClass]="{'alert-action': isRowAlert['new'], 'no-action': !isRowAlert['new']}">{{masterData.displayStatuses[0]}}</div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.today.ordersCount, 'center-align': !dashboardData.new.today.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.new.today.ordersCount">
+              <app-orders-button [displayData]="dashboardData.new.today" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.new.today.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.new.today.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.new.today.ordersCount"></app-no-orders>
@@ -131,6 +131,6 @@
   </div>
 </div>
 
-<app-orders-action-tray (onTrayToggle)="toggleTray($event)">
+<app-orders-action-tray (onTrayToggle)="viewOrders($event)">
   
 </app-orders-action-tray>

@@ -2,7 +2,6 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { IMyOptions, IMyDateModel } from 'mydatepicker';
 import { DashboardService } from 'services/dashboard.service';
 import { OrdersActionTrayComponent } from '../orders-action-tray/orders-action-tray.component';
-declare var $:any;
 
 @Component({
   selector: 'app-dashboard',
@@ -31,6 +30,11 @@ export class DashboardComponent implements OnInit {
     this.isRowAlert = this.dashboardService.getAlertRow();
     this.dashboardData = this.dashboardService.getDashboardData();
     this.masterData = this.dashboardService.getMasterData();
+  }
+
+  viewOrders(e, orderStatus, deliveryTime) {
+    console.log('viewOrders called>>>>>>>>>>');
+    e.preventDefault();
   }
 
   openPanel(e, status) {
