@@ -8,10 +8,10 @@ import { DashboardService } from 'services/dashboard.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
-  private displayStr: string;
-  private ordersCount: number;
   private dashboardData: Object;
   private masterData: Object;
+
+  private isRowAlert: Object;
 
   private myDatePickerOptions: IMyOptions = {
     // other options...
@@ -24,9 +24,7 @@ export class DashboardComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.displayStr = 'View Orders';
-    this.ordersCount = 8;
-
+    this.isRowAlert = this.dashboardService.getAlertRow();
     this.dashboardData = this.dashboardService.getDashboardData();
     this.masterData = this.dashboardService.getMasterData();
   }

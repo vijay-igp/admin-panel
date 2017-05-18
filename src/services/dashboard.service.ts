@@ -5,6 +5,15 @@ export class DashboardService {
     
     constructor() { }
 
+    getAlertRow() {
+        return {
+            "new": true,
+            "confirmed": false,
+            "future": true,
+            "bydate": false
+        }
+    }
+
     getMasterData() {
         return {
             displayStatuses: ["New Orders", "Confirmed", "Out for delivery", "Delivered orders"],
