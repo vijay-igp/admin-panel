@@ -1,6 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { IMyOptions, IMyDateModel } from 'mydatepicker';
 import { DashboardService } from 'services/dashboard.service';
+import { OrdersActionTrayComponent } from '../orders-action-tray/orders-action-tray.component';
+declare var $:any;
 
 @Component({
   selector: 'app-dashboard',
@@ -8,6 +10,8 @@ import { DashboardService } from 'services/dashboard.service';
   styleUrls: ['./dashboard.component.css']
 })
 export class DashboardComponent implements OnInit {
+  @ViewChild(OrdersActionTrayComponent) child: OrdersActionTrayComponent;
+
   private dashboardData: Object;
   private masterData: Object;
 
@@ -31,6 +35,7 @@ export class DashboardComponent implements OnInit {
 
   openPanel(e, status) {
     e.preventDefault();
+    this.child.toggleTray(e);
     console.log('Side-panel opened for status: ', status);
   }
 

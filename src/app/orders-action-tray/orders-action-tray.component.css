@@ -1,0 +1,18 @@
+.orders-action {
+    width: 61%;
+    height: 100%;
+    z-index: 999;
+    position: fixed;
+    top: 0;
+    background-color: white;
+    border-left: 6px solid rgba(224, 224, 224, .5);
+    transition: all 1s ease;
+}
+
+.show-tray {
+    right: 0;
+}
+
+.hide-tray {
+    right: -61%;
+}

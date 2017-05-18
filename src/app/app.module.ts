@@ -33,6 +33,7 @@ import { FooterComponent } from './footer/footer.component';
 import { OrdersButtonComponent } from './orders-button/orders-button.component';
 import { ButtonViewComponent } from './button-view/button-view.component';
 import { NoOrdersComponent } from './no-orders/no-orders.component';
+import { OrdersActionTrayComponent } from './orders-action-tray/orders-action-tray.component';
 
 @NgModule({
   declarations: [
@@ -46,7 +47,8 @@ import { NoOrdersComponent } from './no-orders/no-orders.component';
     FooterComponent,
     OrdersButtonComponent,
     ButtonViewComponent,
-    NoOrdersComponent
+    NoOrdersComponent,
+    OrdersActionTrayComponent
   ],
   imports: [
     BrowserModule,

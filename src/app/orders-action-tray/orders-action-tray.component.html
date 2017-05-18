@@ -1,0 +1,14 @@
+<div class="orders-action" [ngClass]="{'show-tray': trayOpen, 'hide-tray': !trayOpen}">
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-1">
+        <a href="#" (click)="toggleTray($event)">close</a>
+      </div>
+      <div class="col-md-11">
+        <p>Orders tray</p>
+      </div>
+    </div>
+  </div>
+
+</div>
