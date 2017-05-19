@@ -35,21 +35,21 @@
             </div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.tomorrow.ordersCount, 'center-align': !dashboardData.new.tomorrow.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.new.tomorrow.ordersCount">
+              <app-orders-button [displayData]="dashboardData.new.tomorrow" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.new.tomorrow.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.new.tomorrow.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.new.tomorrow.ordersCount"></app-no-orders>
             </div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.new.future.ordersCount, 'center-align': !dashboardData.new.future.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.new.future" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.new.future.ordersCount">
+              <app-orders-button [displayData]="dashboardData.new.future" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.new.future.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.new.future.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.new.future.ordersCount"></app-no-orders>
             </div>
 
             <div class="cell col-md-3" [ngClass]="{'custom-btn-parent': dashboardData.new.bydate.ordersCount, 'center-align': !dashboardData.new.bydate.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.new.bydate" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[3]" *ngIf="dashboardData.new.bydate.ordersCount">
+              <app-orders-button [displayData]="dashboardData.new.bydate" [orderStatus]="masterData.statuses[0]" [deliveryTime]="masterData.deliveryTimes[3]" *ngIf="dashboardData.new.bydate.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.new.bydate.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.new.bydate.ordersCount"></app-no-orders>
@@ -60,28 +60,28 @@
             <div class="cell col-md-3" [ngClass]="{'alert-action': isRowAlert['confirmed'], 'no-action': !isRowAlert['confirmed']}">{{masterData.displayStatuses[1]}}</div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.today.ordersCount, 'center-align': !dashboardData.confirmed.today.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.confirmed.today.ordersCount">
+              <app-orders-button [displayData]="dashboardData.confirmed.today" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[0]" *ngIf="dashboardData.confirmed.today.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.confirmed.today.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.confirmed.today.ordersCount"></app-no-orders>
             </div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.tomorrow.ordersCount, 'center-align': !dashboardData.confirmed.tomorrow.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.confirmed.tomorrow.ordersCount">
+              <app-orders-button [displayData]="dashboardData.confirmed.tomorrow" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[1]" *ngIf="dashboardData.confirmed.tomorrow.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.confirmed.tomorrow.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.confirmed.tomorrow.ordersCount"></app-no-orders>
             </div>
 
             <div class="cell col-md-2" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.future.ordersCount, 'center-align': !dashboardData.confirmed.future.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.confirmed.future.ordersCount">
+              <app-orders-button [displayData]="dashboardData.confirmed.future" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[2]" *ngIf="dashboardData.confirmed.future.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.confirmed.future.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.confirmed.future.ordersCount"></app-no-orders>
             </div>
 
             <div class="cell col-md-3" [ngClass]="{'custom-btn-parent': dashboardData.confirmed.bydate.ordersCount, 'center-align': !dashboardData.confirmed.bydate.ordersCount}">
-              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[3]" *ngIf="dashboardData.confirmed.bydate.ordersCount">
+              <app-orders-button [displayData]="dashboardData.confirmed.bydate" [orderStatus]="masterData.statuses[1]" [deliveryTime]="masterData.deliveryTimes[3]" *ngIf="dashboardData.confirmed.bydate.ordersCount" (onViewOrders)="viewOrders($event)">
                 <app-button-view [viewData]="dashboardData.confirmed.bydate.ordersCount"></app-button-view>
               </app-orders-button>
               <app-no-orders [viewData]="dashboardData.confirmed.bydate.ordersCount"></app-no-orders>
