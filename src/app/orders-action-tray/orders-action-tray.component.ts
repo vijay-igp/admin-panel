@@ -6,7 +6,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./orders-action-tray.component.css']
 })
 export class OrdersActionTrayComponent implements OnInit {
-  private trayOpen: Boolean = false;
+  private trayOpen: Boolean = true;
   @Output() onTrayToggle: EventEmitter<any> = new EventEmitter();
 
   constructor() { }

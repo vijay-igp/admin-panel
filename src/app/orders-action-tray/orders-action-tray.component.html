@@ -1,12 +1,71 @@
 <div class="orders-action" [ngClass]="{'show-tray': trayOpen, 'hide-tray': !trayOpen}">
 
-  <div class="container">
+  <div class="container-fluid orders-view">
     <div class="row">
       <div class="col-md-1">
         <a href="#" (click)="toggleTray($event)">close</a>
       </div>
       <div class="col-md-11">
-        <p>Orders tray</p>
+        <p>New orders - Delivery for today</p>
+        <p>Total - 6 Orders</p>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 order-row">
+        <div class="container-fluid orders-tray">
+          <div class="row">
+            <div class="col-md-7 order-details no-padding">
+              <p>Order ID: IGP666 Same Day Delivery 12/4/17 2:00 PM</p>
+              <p>Deliver to: Sachin Tendulkar Sachin Tendulkar Sachin Tendulkar</p>
+              <p>Address - Chandivli, Mumbai</p>
+              <p>Contact Number - 123456789</p>
+            </div>
+            <div class="col-md-5 order-actions">
+              <div class="row">
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Reject
+                </div>
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Confirm
+                </div>
+              </div>
+              <div class="row">
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Print Order
+                </div>
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Print Message
+                </div>
+              </div>
+              <div class="row">
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Put On Hold
+                </div>
+                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                  Other
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <p>Product Name: Half kg Pineapple cake</p>
+            <p>Product Components -</p>
+            <div class="col-md-12 product-holder">
+              <div class="row">
+                <div class="col-md-4">
+                  <img class="product-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Product 1">
+                  <span>=</span>
+                </div>
+                <div class="col-md-8">
+                  <div class="product-component">
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Product 1">
+                  </div>
+                  <span>+</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>

@@ -1,12 +1,61 @@
 .orders-action {
     width: 61%;
     height: 100%;
+    overflow-y: auto;
     z-index: 999;
     position: fixed;
     top: 0;
     background-color: white;
     border-left: 6px solid rgba(224, 224, 224, .5);
     transition: all 1s ease;
+}
+
+.orders-view {
+    padding: 10px;
+}
+
+.order-row {
+    padding: 5px;
+    margin: 15px 15px;
+    background-color: white;
+    box-shadow: 0 1px 3px #888888;
+    width: 96%;
+}
+
+.order-details {
+    border-right: 2px solid #E0E0E0;
+}
+
+.order-actions {
+    padding: 2px 35px;
+}
+
+.order-actions > .row {
+    padding-bottom: 5px;
+}
+
+.product-holder {
+    margin: 5px 20px 10px;
+}
+
+.product-image {
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+}
+
+.product-holder {
+    margin: 0 10px;
+}
+
+.product-component {
+    width: 75px;
+    height: 150px;
+}
+
+.component-image {
+    width: 75px;
+    height: 75px;
 }
 
 .show-tray {
