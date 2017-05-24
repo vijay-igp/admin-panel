@@ -1,9 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
 @import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-/*@import 'custom_css/bootstrap-extend.min.css';
-@import 'custom_css/site.css';
-@import 'custom_css/custom.css';*/
 
 /* Utility css start */
 .no-padding {
@@ -18,28 +15,56 @@
     font-weight: bold;
 }
 
+.uppercase {
+    text-transform: uppercase;
+}
+
+.center-align {
+    text-align: center;
+}
+
 .underline {
     text-decoration: underline;
 }
 
-.bg-grey{
+.bg-grey {
     background-color: #EFEFEF! important;
 }
 
-.bg-igp{
+.bg-igp {
     background-color: #C3404E! important;
 }
 
-.text-igp{
+.bg-white {
+    background-color: #ffffff! important;
+}
+
+.bg-green {
+    background-color: #25C355! important;
+}
+
+.bg-black {
+    background-color: #363636! important;
+}
+
+.text-igp {
     color: #C3404E! important;
 }
 
-.text-white{
-    color:#ffffff! important;
+.text-white {
+    color: #ffffff! important;
 }
 
-.text-black{
-    color:#000000! important;
+.text-black {
+    color: #000000! important;
+}
+
+.text-green {
+    color: #25C355! important;
+}
+
+.text-grey {
+    color: #888888! important;
 }
 /* Utility css end */
 

@@ -3,64 +3,99 @@
   <div class="container-fluid orders-view">
     <div class="row">
       <div class="col-md-1">
-        <a href="#" (click)="toggleTray($event)">close</a>
+        <a href="#" (click)="toggleTray($event)">
+          <i class="glyphicon glyphicon-remove close-tray"></i>
+        </a>
       </div>
-      <div class="col-md-11">
-        <p>New orders - Delivery for today</p>
-        <p>Total - 6 Orders</p>
+      <div class="col-md-11 no-padding">
+        <p class="text-bold uppercase">New orders - Delivery for today</p>
+        <p class="text-grey no-margin">Total - 6 Orders</p>
       </div>
     </div>
     <div class="row">
       <div class="col-md-12 order-row">
         <div class="container-fluid orders-tray">
-          <div class="row">
+          <div class="row delivery-details">
             <div class="col-md-7 order-details no-padding">
-              <p>Order ID: IGP666 Same Day Delivery 12/4/17 2:00 PM</p>
-              <p>Deliver to: Sachin Tendulkar Sachin Tendulkar Sachin Tendulkar</p>
-              <p>Address - Chandivli, Mumbai</p>
-              <p>Contact Number - 123456789</p>
+              <p>
+                <span class="order-id">Order ID: IGP12345</span>
+                <span class="delivery-time">Same Day Delivery 12/4/17 2:00 PM</span>
+              </p>
+              <div class="text-bold">Deliver to: Vaibhav Singh</div>
+              <div class="address">Address - Boomerang, Chandivli, Mumbai</div>
+              <div class="contact">Contact Number - 123456789</div>
             </div>
             <div class="col-md-5 order-actions">
               <div class="row">
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button uppercase text-bold text-black bg-white" (click)="openOrdersTray($event)">
                   Reject
                 </div>
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button uppercase text-bold text-white bg-green" (click)="openOrdersTray($event)">
                   Confirm
                 </div>
               </div>
               <div class="row">
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
                   Print Order
                 </div>
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
                   Print Message
                 </div>
               </div>
               <div class="row">
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button text-bold text-white bg-black" (click)="openOrdersTray($event)">
                   Put On Hold
                 </div>
-                <div class="btn btn-primary orders-button text-bold" [ngClass]="{'bg-igp text-white': isAlert, 'bg-grey text-black': !isAlert}" (click)="openOrdersTray($event)">
+                <div class="btn btn-primary actions-button text-bold text-white bg-black" (click)="openOrdersTray($event)">
                   Other
                 </div>
               </div>
             </div>
           </div>
           <div class="row">
-            <p>Product Name: Half kg Pineapple cake</p>
+            <p>Product Name: <span class="uppercase text-igp">Half kg Pineapple cake</span></p>
             <p>Product Components -</p>
             <div class="col-md-12 product-holder">
               <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4 no-padding">
                   <img class="product-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Product 1">
-                  <span>=</span>
+                  <span class="equal-sign">=</span>
                 </div>
-                <div class="col-md-8">
+                <div class="col-md-8 no-padding">
                   <div class="product-component">
-                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Product 1">
+                    <div class="component-head">EGGLESS</div>
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Component 1">
+                    <div class="component-quantity">QTY-3</div>
+                    <div class="component-name">Ferrero Rocher</div>
                   </div>
-                  <span>+</span>
+                  <div class="plus-sign">+</div>
+                  <div class="product-component">
+                    <div class="component-head">EGGLESS</div>
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Component 1">
+                    <div class="component-quantity">QTY-3</div>
+                    <div class="component-name">Ferrero Rocher</div>
+                  </div>
+                  <span class="plus-sign">+</span>
+                  <div class="product-component">
+                    <div class="component-head">EGGLESS</div>
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Component 1">
+                    <div class="component-quantity">QTY-3</div>
+                    <div class="component-name">Ferrero Rocher</div>
+                  </div>
+                  <span class="plus-sign">+</span>
+                  <div class="product-component">
+                    <div class="component-head">EGGLESS</div>
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Component 1">
+                    <div class="component-quantity">QTY-3</div>
+                    <div class="component-name">Ferrero Rocher</div>
+                  </div>
+                  <span class="plus-sign">+</span>
+                  <div class="product-component">
+                    <div class="component-head">EGGLESS</div>
+                    <img class="component-image" src="https://d1xs5fw35mbn8b.cloudfront.net/p/m/p-round-black-forest-cake-half-kg--13461-m.jpg?v=1495502520000" alt="Component 1">
+                    <div class="component-quantity">QTY-3</div>
+                    <div class="component-name">Ferrero Rocher</div>
+                  </div>
                 </div>
               </div>
             </div>
