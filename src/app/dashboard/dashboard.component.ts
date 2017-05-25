@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { IMyOptions, IMyDateModel } from 'mydatepicker';
 import { DashboardService } from 'services/dashboard.service';
+import { AuthenticationService } from 'services/authentication.service';
 import { OrdersActionTrayComponent } from '../orders-action-tray/orders-action-tray.component';
 
 @Component({
@@ -23,18 +24,22 @@ export class DashboardComponent implements OnInit {
   private dateRange: Object = { date: { year: 2017, month: 5, day: 10 } };
 
   constructor(
-    private dashboardService: DashboardService
+    private dashboardService: DashboardService,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
+    // this.authenticationService.generateEncryptedPassword('123456');
+
     this.isRowAlert = this.dashboardService.getAlertRow();
     this.dashboardData = this.dashboardService.getDashboardData();
     this.masterData = this.dashboardService.getMasterData();
   }
 
   viewOrders(e, orderStatus, deliveryTime) {
-    console.log('viewOrders called>>>>>>>>>>');
     e.preventDefault();
+    this.child.toggleTray(e);
+    console.log('viewOrders called>>>>>>>>>>');
   }
 
   openPanel(e, status) {
